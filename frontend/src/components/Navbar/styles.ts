@@ -4,14 +4,23 @@ import { lighten } from 'polished';
 export const Container = styled.header`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
-  padding: 10px 10px;
+  background: #e3350d;
+
   margin-bottom: 20px;
 
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35) !important;
+`;
 
-  background: #e3350d;
+export const Content = styled.nav`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  max-width: 1300px;
+  padding: 10px 10px;
 
   @media (min-width: 768px) {
     padding: 10px 40px;
