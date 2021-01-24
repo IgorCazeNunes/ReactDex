@@ -19,11 +19,17 @@ export const Content = styled.nav`
   align-items: center;
   justify-content: space-between;
 
-  max-width: 1300px;
-  padding: 10px 10px;
+  max-width: 1360px;
+
+  padding: 10px 0;
+  margin: 0 10px;
 
   @media (min-width: 768px) {
-    padding: 10px 40px;
+    margin: 0 40px;
+  }
+
+  @media (min-width: 1280px) {
+    margin: 0 80px;
   }
 `;
 
