@@ -18,7 +18,7 @@ const Dashboard: React.FC = () => (
     <Container>
       <PokemonList>
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 Charizard</strong>
 
             <PokemonItemDescription>
@@ -34,7 +34,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -49,7 +49,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -64,7 +64,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -79,7 +79,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -94,7 +94,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -109,7 +109,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -124,7 +124,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -139,7 +139,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -154,7 +154,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -169,7 +169,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 Charizard</strong>
 
             <PokemonItemDescription>
@@ -185,7 +185,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -200,7 +200,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -215,7 +215,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -230,7 +230,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -245,7 +245,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -260,7 +260,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -275,7 +275,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -290,7 +290,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -305,7 +305,7 @@ const Dashboard: React.FC = () => (
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/forgot">
+          <a href="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
