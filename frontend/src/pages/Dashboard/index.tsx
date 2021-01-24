@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Header from '../../components/Navbar';
 
@@ -18,7 +19,7 @@ const Dashboard: React.FC = () => (
     <Container>
       <PokemonList>
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 Charizard</strong>
 
             <PokemonItemDescription>
@@ -30,11 +31,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -45,11 +46,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -60,11 +61,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -75,11 +76,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -90,11 +91,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -105,11 +106,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -120,11 +121,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -135,11 +136,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -150,11 +151,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -165,11 +166,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 Charizard</strong>
 
             <PokemonItemDescription>
@@ -181,11 +182,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -196,11 +197,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -211,11 +212,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -226,11 +227,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -241,11 +242,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -256,11 +257,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -271,11 +272,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -286,11 +287,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -301,11 +302,11 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
 
         <PokemonItem>
-          <a href="/details/3">
+          <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
@@ -316,7 +317,7 @@ const Dashboard: React.FC = () => (
 
               <img src={CharizardImage} alt="Charizard" />
             </PokemonItemDescription>
-          </a>
+          </Link>
         </PokemonItem>
       </PokemonList>
     </Container>
