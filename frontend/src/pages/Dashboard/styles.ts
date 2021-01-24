@@ -6,14 +6,17 @@ export const Container = styled.main`
   justify-content: center;
 
   height: 100vh;
-  width: 100%;
-  max-width: 1300px;
+  max-width: 1360px;
 
-  margin: auto;
-  padding: 0 10px;
+  padding: 10px 0;
+  margin: 0 10px;
 
   @media (min-width: 768px) {
-    padding: 0 40px;
+    margin: 0 40px;
+  }
+
+  @media (min-width: 1280px) {
+    margin: 0 80px;
   }
 `;
 
