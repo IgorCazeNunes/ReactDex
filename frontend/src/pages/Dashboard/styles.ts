@@ -1,6 +1,20 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
+const mediaQueryBP = {
+  /** max-width: 767 */
+  maxWidthSM: 'max-width: 767px',
+
+  /** min-width: 768 */
+  minWidthMD: 'min-width: 768px',
+
+  /** max-width: 1023 */
+  maxWidthMD: 'max-width: 1023px',
+
+  /** min-width: 1024 */
+  minWidthLG: 'min-width: 1024px',
+};
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -14,17 +28,17 @@ export const Content = styled.main`
   align-self: center;
   justify-content: center;
 
-  height: 100vh;
+  height: auto;
   max-width: 1360px;
 
   margin: 10px;
 
   @media (min-width: 768px) {
-    margin: 10px 40px;
+    margin: 20px 40px;
   }
 
   @media (min-width: 1280px) {
-    margin: 10px 80px;
+    margin: 10px 80px 200px 80px;
   }
 `;
 
@@ -51,13 +65,13 @@ export const PokemonItem = styled.li`
 
   list-style: none;
 
-  @media (max-width: 767px) {
+  @media (${mediaQueryBP.maxWidthSM}) {
     &:nth-child(2n) {
       margin-right: 0;
     }
   }
 
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (${mediaQueryBP.minWidthMD}) and (${mediaQueryBP.maxWidthMD}) {
     width: 32%;
     margin-right: 2%;
 
@@ -66,7 +80,7 @@ export const PokemonItem = styled.li`
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (${mediaQueryBP.minWidthLG}) {
     width: 23%;
     height: 160px;
 
@@ -94,14 +108,14 @@ export const PokemonItem = styled.li`
 
     transition: all 0.2s;
 
-    @media (min-width: 768px) {
+    @media (${mediaQueryBP.minWidthMD}) {
       &:hover {
         background: #def5f7;
         box-shadow: 0 0.5rem 1rem ${darken(0.5, '#ffffff')};
       }
     }
 
-    @media (min-width: 1024px) {
+    @media (${mediaQueryBP.minWidthLG}) {
       font-size: 16px;
     }
 
@@ -150,7 +164,7 @@ export const PokemonItemDescription = styled.div`
       border-radius: 5px;
       transition: background-color 0.2s;
 
-      @media (min-width: 1024px) {
+      @media (${mediaQueryBP.minWidthLG}) {
         height: 30px;
         padding: 5px;
         margin-top: 3px;
@@ -169,7 +183,7 @@ export const PokemonItemDescription = styled.div`
       max-height: 95px;
     }
 
-    @media (min-width: 1024px) {
+    @media (${mediaQueryBP.minWidthLG}) {
       max-width: 105px;
       max-height: 105px;
     }
