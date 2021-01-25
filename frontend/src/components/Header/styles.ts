@@ -10,7 +10,7 @@ export const Container = styled.header`
 
   margin-bottom: 20px;
 
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35) !important;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
 `;
 
 export const Content = styled.nav`
