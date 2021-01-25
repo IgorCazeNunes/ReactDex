@@ -1,21 +1,21 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-const mediaQueryBP = {
-  /** max-width: 767 */
-  maxWidthSM: 'max-width: 767px',
+const mqBreakPoints = {
+  /** max-width: 767.98 */
+  smMax: 'max-width: 767.98px',
 
   /** min-width: 768 */
-  minWidthMD: 'min-width: 768px',
+  mdMin: 'min-width: 768px',
 
-  /** max-width: 1023 */
-  maxWidthMD: 'max-width: 1023px',
+  /** max-width: 1023.98 */
+  mdMax: 'max-width: 1023.98px',
 
   /** min-width: 1024 */
-  minWidthLG: 'min-width: 1024px',
+  lgMin: 'min-width: 1024px',
 
   /** min-width: 1280 */
-  minWidthXLG: 'min-width: 1280px',
+  xlgMin: 'min-width: 1280px',
 };
 
 export const Container = styled.div`
@@ -36,11 +36,11 @@ export const Content = styled.main`
 
   margin: 10px;
 
-  @media (${mediaQueryBP.minWidthMD}) {
+  @media (${mqBreakPoints.mdMin}) {
     margin: 20px 40px;
   }
 
-  @media (${mediaQueryBP.minWidthXLG}) {
+  @media (${mqBreakPoints.xlgMin}) {
     margin: 20px 80px;
   }
 `;
@@ -68,13 +68,13 @@ export const PokemonItem = styled.li`
 
   list-style: none;
 
-  @media (${mediaQueryBP.maxWidthSM}) {
+  @media (${mqBreakPoints.smMax}) {
     &:nth-child(2n) {
       margin-right: 0;
     }
   }
 
-  @media (${mediaQueryBP.minWidthMD}) and (${mediaQueryBP.maxWidthMD}) {
+  @media (${mqBreakPoints.mdMin}) and (${mqBreakPoints.mdMax}) {
     width: 32%;
     margin-right: 2%;
 
@@ -83,7 +83,7 @@ export const PokemonItem = styled.li`
     }
   }
 
-  @media (${mediaQueryBP.minWidthLG}) {
+  @media (${mqBreakPoints.lgMin}) {
     width: 23%;
     height: 160px;
 
@@ -111,14 +111,14 @@ export const PokemonItem = styled.li`
 
     transition: all 0.2s;
 
-    @media (${mediaQueryBP.minWidthMD}) {
+    @media (${mqBreakPoints.mdMin}) {
       &:hover {
         background: #def5f7;
         box-shadow: 0 0.5rem 1rem ${darken(0.5, '#ffffff')};
       }
     }
 
-    @media (${mediaQueryBP.minWidthLG}) {
+    @media (${mqBreakPoints.lgMin}) {
       font-size: 16px;
     }
 
@@ -167,7 +167,7 @@ export const PokemonItemDescription = styled.div`
       border-radius: 5px;
       transition: background-color 0.2s;
 
-      @media (${mediaQueryBP.minWidthLG}) {
+      @media (${mqBreakPoints.lgMin}) {
         height: 30px;
         padding: 5px;
         margin-top: 3px;
@@ -186,7 +186,7 @@ export const PokemonItemDescription = styled.div`
       max-height: 95px;
     }
 
-    @media (${mediaQueryBP.minWidthLG}) {
+    @media (${mqBreakPoints.lgMin}) {
       max-width: 105px;
       max-height: 105px;
     }
