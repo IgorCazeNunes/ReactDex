@@ -1,7 +1,32 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
+import LogoPokeball from '../../assets/pokeball.svg';
+
 import mediaBreak from '../../utils/mediaQueryBreakPoints';
+import typesBackgroundVariation from '../../utils/typesBackgroundVariation';
+
+export interface PokemonItemProps {
+  type:
+    | 'normal'
+    | 'fire'
+    | 'fighting'
+    | 'water'
+    | 'flying'
+    | 'grass'
+    | 'poison'
+    | 'electric'
+    | 'ground'
+    | 'psychic'
+    | 'rock'
+    | 'ice'
+    | 'bug'
+    | 'dragon'
+    | 'ghost'
+    | 'dark'
+    | 'steel'
+    | 'fairy';
+}
 
 export const Container = styled.div`
   display: flex;
@@ -44,7 +69,7 @@ export const PokemonList = styled.ul`
   list-style: none;
 `;
 
-export const PokemonItem = styled.li`
+export const PokemonItem = styled.li<PokemonItemProps>`
   display: flex;
 
   width: 48%;
@@ -86,25 +111,43 @@ export const PokemonItem = styled.li`
 
     padding: 10px;
 
-    background: #ffffff;
+    background-color: ${props => typesBackgroundVariation[props.type]};
+    background-image: url(${LogoPokeball});
+    background-size: 150px;
+    background-position: 50% 70px;
+    background-repeat: no-repeat;
+
     border-radius: 10px;
     box-shadow: 0 0.5rem 1rem ${darken(0.35, '#ffffff')};
 
     text-decoration: none;
     font-size: 12px;
-    color: #262626;
+    color: #ffffff;
 
     transition: all 0.2s;
 
     @media (${mediaBreak.mdMin}) {
+      background-size: 170px;
+      background-position: 50% 55px;
+
       &:hover {
-        background: #def5f7;
+        background: ${props =>
+          darken(0.1, typesBackgroundVariation[props.type])};
+
         box-shadow: 0 0.5rem 1rem ${darken(0.5, '#ffffff')};
       }
     }
 
     @media (${mediaBreak.lgMin}) {
+      background-size: 170px;
+      background-position: 50% 75px;
+
       font-size: 16px;
+    }
+
+    @media (${mediaBreak.xlMin}) {
+      background-size: 220px;
+      background-position: 50% 45px;
     }
 
     strong {

@@ -20,7 +20,7 @@ const Dashboard: React.FC = () => (
 
     <Content>
       <PokemonList>
-        <PokemonItem>
+        <PokemonItem type="dragon">
           <Link to="/details/3">
             <strong>003 Charizard</strong>
 
@@ -39,7 +39,7 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fighting">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
@@ -63,7 +63,7 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
