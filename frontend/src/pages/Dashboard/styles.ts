@@ -166,7 +166,7 @@ export const PokemonItemDescription = styled.div`
     height: 100%;
     max-height: 75px;
 
-    @media (min-width: 425px) {
+    @media (${mediaBreak.mdMin}) {
       max-width: 95px;
       max-height: 95px;
     }
