@@ -1,22 +1,30 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-export const Container = styled.main`
+export const Container = styled.div`
   display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+`;
+
+export const Content = styled.main`
+  display: flex;
+  align-self: center;
   justify-content: center;
 
+  width: 100%;
   height: 100vh;
   max-width: 1360px;
 
-  padding: 10px 0;
-  margin: 0 10px;
+  margin: 10px;
 
   @media (min-width: 768px) {
-    margin: 0 40px;
+    margin: 10px 40px;
   }
 
   @media (min-width: 1280px) {
-    margin: 0 80px;
+    margin: 10px 80px;
   }
 `;
 

@@ -7,16 +7,17 @@ import CharizardImage from '../../assets/charizard-render.png';
 
 import {
   Container,
+  Content,
   PokemonList,
   PokemonItem,
   PokemonItemDescription,
 } from './styles';
 
 const Dashboard: React.FC = () => (
-  <>
+  <Container>
     <Header />
 
-    <Container>
+    <Content>
       <PokemonList>
         <PokemonItem>
           <Link to="/details/3">
@@ -320,8 +321,8 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
       </PokemonList>
-    </Container>
-  </>
+    </Content>
+  </Container>
 );
 
 export default Dashboard;
