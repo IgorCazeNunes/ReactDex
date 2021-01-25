@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { lighten } from 'polished';
 
+import mediaBreak from '../../utils/mediaQueryBreakPoints';
+
 export const Container = styled.header`
   display: flex;
   align-items: center;
@@ -24,11 +26,11 @@ export const Content = styled.nav`
   padding: 10px 0;
   margin: 0 10px;
 
-  @media (min-width: 768px) {
+  @media (${mediaBreak.mdMin}) {
     margin: 0 40px;
   }
 
-  @media (min-width: 1280px) {
+  @media (${mediaBreak.xlMin}) {
     margin: 0 80px;
   }
 `;
@@ -39,14 +41,14 @@ export const Title = styled.h1`
 
   color: #ffffff;
 
-  @media (min-width: 768px) {
+  @media (${mediaBreak.mdMin}) {
     font-size: 30px;
   }
 
   img {
     margin: 0;
 
-    @media (min-width: 768px) {
+    @media (${mediaBreak.mdMin}) {
       margin-right: 5px;
     }
   }
@@ -54,7 +56,7 @@ export const Title = styled.h1`
   span {
     display: none;
 
-    @media (min-width: 768px) {
+    @media (${mediaBreak.mdMin}) {
       display: block;
     }
   }
@@ -79,7 +81,7 @@ export const NavList = styled.ul`
       color: #ffffff;
       text-decoration: none;
 
-      @media (min-width: 768px) {
+      @media (${mediaBreak.mdMin}) {
         color: ${lighten(0.4, '#e3350d')};
 
         transition: color 0.2s;
