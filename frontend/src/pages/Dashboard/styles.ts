@@ -14,8 +14,11 @@ const mqBreakPoints = {
   /** min-width: 1024 */
   lgMin: 'min-width: 1024px',
 
+  /** min-width: 1279.98 */
+  lgMax: 'max-width: 1279.98px',
+
   /** min-width: 1280 */
-  xlgMin: 'min-width: 1280px',
+  xlMin: 'min-width: 1280px',
 };
 
 export const Container = styled.div`
@@ -40,7 +43,7 @@ export const Content = styled.main`
     margin: 20px 40px;
   }
 
-  @media (${mqBreakPoints.xlgMin}) {
+  @media (${mqBreakPoints.xlMin}) {
     margin: 20px 80px;
   }
 `;
