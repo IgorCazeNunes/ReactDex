@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Header from '../../components/Header';
+import TypeBadge from '../../components/TypeBadge';
 
 import CharizardImage from '../../assets/charizard-render.png';
 
@@ -25,9 +26,12 @@ const Dashboard: React.FC = () => (
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
-                <li>Fighting</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -41,8 +45,17 @@ const Dashboard: React.FC = () => (
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
+
+                <li>
+                  <TypeBadge type="fighting" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -56,8 +69,12 @@ const Dashboard: React.FC = () => (
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -65,14 +82,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -80,14 +101,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -95,14 +120,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -110,14 +139,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -125,14 +158,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -140,14 +177,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -155,14 +196,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -170,14 +215,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
                 <li>Fighting</li>
               </ul>
 
@@ -186,14 +235,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -201,14 +254,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -216,14 +273,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -231,14 +292,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -246,14 +311,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -261,14 +330,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -276,14 +349,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -291,14 +368,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
@@ -306,14 +387,18 @@ const Dashboard: React.FC = () => (
           </Link>
         </PokemonItem>
 
-        <PokemonItem>
+        <PokemonItem type="fire">
           <Link to="/details/3">
             <strong>003 - Charizard</strong>
 
             <PokemonItemDescription>
               <ul>
-                <li>Fire</li>
-                <li>Dragon</li>
+                <li>
+                  <TypeBadge type="fire" />
+                </li>
+                <li>
+                  <TypeBadge type="dragon" />
+                </li>
               </ul>
 
               <img src={CharizardImage} alt="Charizard" />
