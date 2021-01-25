@@ -132,30 +132,12 @@ export const PokemonItemDescription = styled.div`
   ul {
     list-style: none;
     width: 40%;
-    max-width: 75px;
 
     li {
-      flex: 1;
-      justify-content: center;
-
-      height: 25px;
-
-      padding: 5px;
       margin-top: 3px;
 
-      background: ${darken(0.35, '#ffffff')};
-
-      color: #ffffff;
-      text-align: center;
-      font-weight: 500;
-
-      border-radius: 5px;
-      transition: background-color 0.2s;
-
       @media (${mediaBreak.lgMin}) {
-        height: 30px;
-        padding: 5px;
-        margin-top: 3px;
+        margin-top: 5px;
       }
     }
   }
