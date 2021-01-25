@@ -13,6 +13,9 @@ const mediaQueryBP = {
 
   /** min-width: 1024 */
   minWidthLG: 'min-width: 1024px',
+
+  /** min-width: 1280 */
+  minWidthXLG: 'min-width: 1280px',
 };
 
 export const Container = styled.div`
@@ -33,12 +36,12 @@ export const Content = styled.main`
 
   margin: 10px;
 
-  @media (min-width: 768px) {
+  @media (${mediaQueryBP.minWidthMD}) {
     margin: 20px 40px;
   }
 
-  @media (min-width: 1280px) {
-    margin: 10px 80px 200px 80px;
+  @media (${mediaQueryBP.minWidthXLG}) {
+    margin: 20px 80px;
   }
 `;
 
