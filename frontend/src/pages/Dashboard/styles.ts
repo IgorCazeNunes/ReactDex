@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
+  width: 100%;
   height: 100vh;
 `;
 
@@ -13,7 +14,6 @@ export const Content = styled.main`
   align-self: center;
   justify-content: center;
 
-  width: 100%;
   height: 100vh;
   max-width: 1360px;
 
