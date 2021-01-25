@@ -1,25 +1,7 @@
 import styled from 'styled-components';
 import { darken } from 'polished';
 
-const mqBreakPoints = {
-  /** max-width: 767.98 */
-  smMax: 'max-width: 767.98px',
-
-  /** min-width: 768 */
-  mdMin: 'min-width: 768px',
-
-  /** max-width: 1023.98 */
-  mdMax: 'max-width: 1023.98px',
-
-  /** min-width: 1024 */
-  lgMin: 'min-width: 1024px',
-
-  /** min-width: 1279.98 */
-  lgMax: 'max-width: 1279.98px',
-
-  /** min-width: 1280 */
-  xlMin: 'min-width: 1280px',
-};
+import mediaBreak from '../../utils/mediaQueryBreakPoints';
 
 export const Container = styled.div`
   display: flex;
@@ -39,11 +21,11 @@ export const Content = styled.main`
 
   margin: 10px;
 
-  @media (${mqBreakPoints.mdMin}) {
+  @media (${mediaBreak.mdMin}) {
     margin: 20px 40px;
   }
 
-  @media (${mqBreakPoints.xlMin}) {
+  @media (${mediaBreak.xlMin}) {
     margin: 20px 80px;
   }
 `;
@@ -71,13 +53,13 @@ export const PokemonItem = styled.li`
 
   list-style: none;
 
-  @media (${mqBreakPoints.smMax}) {
+  @media (${mediaBreak.smMax}) {
     &:nth-child(2n) {
       margin-right: 0;
     }
   }
 
-  @media (${mqBreakPoints.mdMin}) and (${mqBreakPoints.mdMax}) {
+  @media (${mediaBreak.mdMin}) and (${mediaBreak.mdMax}) {
     width: 32%;
     margin-right: 2%;
 
@@ -86,7 +68,7 @@ export const PokemonItem = styled.li`
     }
   }
 
-  @media (${mqBreakPoints.lgMin}) {
+  @media (${mediaBreak.lgMin}) {
     width: 23%;
     height: 160px;
 
@@ -114,14 +96,14 @@ export const PokemonItem = styled.li`
 
     transition: all 0.2s;
 
-    @media (${mqBreakPoints.mdMin}) {
+    @media (${mediaBreak.mdMin}) {
       &:hover {
         background: #def5f7;
         box-shadow: 0 0.5rem 1rem ${darken(0.5, '#ffffff')};
       }
     }
 
-    @media (${mqBreakPoints.lgMin}) {
+    @media (${mediaBreak.lgMin}) {
       font-size: 16px;
     }
 
@@ -170,7 +152,7 @@ export const PokemonItemDescription = styled.div`
       border-radius: 5px;
       transition: background-color 0.2s;
 
-      @media (${mqBreakPoints.lgMin}) {
+      @media (${mediaBreak.lgMin}) {
         height: 30px;
         padding: 5px;
         margin-top: 3px;
@@ -189,7 +171,7 @@ export const PokemonItemDescription = styled.div`
       max-height: 95px;
     }
 
-    @media (${mqBreakPoints.lgMin}) {
+    @media (${mediaBreak.lgMin}) {
       max-width: 105px;
       max-height: 105px;
     }
