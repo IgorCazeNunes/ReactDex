@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 
 import { TypeBadgeProps } from './index';
 
@@ -10,6 +11,8 @@ export const Container = styled.span<TypeBadgeProps>`
   padding: 0.35em 0.5em;
 
   background: ${props => typesBackgroundVariation[props.type]};
+  border: 1.5px solid
+    ${props => darken(0.4, typesBackgroundVariation[props.type])};
 
   color: #ffffff;
   font-size: 0.6rem;
