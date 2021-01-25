@@ -124,17 +124,14 @@ export const PokemonItem = styled.li<PokemonItemProps>`
     font-size: 12px;
     color: #ffffff;
 
-    transition: all 0.2s;
+    transition: all 0.5s;
 
     @media (${mediaBreak.mdMin}) {
       background-size: 170px;
       background-position: 50% 55px;
 
       &:hover {
-        background: ${props =>
-          darken(0.1, typesBackgroundVariation[props.type])};
-
-        box-shadow: 0 0.5rem 1rem ${darken(0.5, '#ffffff')};
+        transform: scale(1.1);
       }
     }
 
