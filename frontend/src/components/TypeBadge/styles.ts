@@ -15,7 +15,7 @@ export const Container = styled.span<TypeBadgeProps>`
     ${props => darken(0.4, typesBackgroundVariation[props.type])};
 
   color: #ffffff;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   text-align: center;
   text-transform: uppercase;
   line-height: 1;
