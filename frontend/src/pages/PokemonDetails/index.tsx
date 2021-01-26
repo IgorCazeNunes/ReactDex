@@ -27,7 +27,7 @@ const PokemonDetails: React.FC = () => (
           <span>Back</span>
         </Link>
 
-        <span>003 - Charizard</span>
+        <span>999 - Chesnaught</span>
       </ContainerHeader>
 
       <PokemonDescription>

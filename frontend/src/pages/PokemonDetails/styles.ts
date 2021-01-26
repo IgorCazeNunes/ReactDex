@@ -32,7 +32,75 @@ export const Content = styled.main`
   }
 `;
 
-export const ContainerHeader = styled.h1``;
+export const ContainerHeader = styled.h1`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  a {
+    display: flex;
+    align-items: center;
+
+    position: absolute;
+
+    color: #000000;
+    text-decoration: none;
+
+    transition: color 0.4s;
+
+    &:hover {
+      color: #000000;
+    }
+
+    @media (${mediaBreak.mdMin}) {
+      font-size: 1.2rem;
+      color: #666666;
+    }
+
+    svg {
+      margin-right: 2px;
+
+      @media (${mediaBreak.mdMin}) {
+        margin-right: 4px;
+      }
+
+      @media (${mediaBreak.xlMin}) {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    span {
+      font-size: 1rem;
+
+      @media (${mediaBreak.mdMin}) {
+        font-size: 1.2rem;
+      }
+
+      @media (${mediaBreak.xlMin}) {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  span {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    font-size: 1.25rem;
+
+    @media (${mediaBreak.mdMin}) {
+      justify-content: center;
+
+      font-size: 1.75rem;
+    }
+
+    @media (${mediaBreak.xlMin}) {
+      font-size: 2.25rem;
+    }
+  }
+`;
 
 export const PokemonDescription = styled.section``;
 
