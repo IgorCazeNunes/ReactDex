@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import LogoPokeball from '../../assets/pokeball.svg';
+
 import mediaBreak from '../../utils/mediaQueryBreakPoints';
 
 export const Container = styled.div`
@@ -14,10 +16,9 @@ export const Content = styled.main`
   display: flex;
   flex-direction: column;
 
-  height: 100vh;
   max-width: 1360px;
 
-  background: #ffffff;
+  background: #f08030;
   border-radius: 10px;
 
   padding: 20px;
@@ -30,6 +31,27 @@ export const Content = styled.main`
   @media (${mediaBreak.xlMin}) {
     margin: 20px 80px;
   }
+
+  p,
+  span {
+    font-size: 1.1rem;
+    text-align: justify;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 2;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
 `;
 
 export const ContainerHeader = styled.h1`
@@ -37,24 +59,26 @@ export const ContainerHeader = styled.h1`
   align-items: center;
   justify-content: space-between;
 
+  margin-bottom: 20px;
+
   a {
     display: flex;
     align-items: center;
 
     position: absolute;
 
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
 
     transition: color 0.4s;
 
     &:hover {
-      color: #000000;
+      color: #ffffff;
     }
 
     @media (${mediaBreak.mdMin}) {
       font-size: 1.2rem;
-      color: #666666;
+      color: #fbccc1;
     }
 
     svg {
@@ -83,12 +107,15 @@ export const ContainerHeader = styled.h1`
     }
   }
 
-  span {
+  > span {
     flex: 1;
     display: flex;
     justify-content: flex-end;
 
-    font-size: 1.25rem;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
 
     @media (${mediaBreak.mdMin}) {
       justify-content: center;
@@ -102,8 +129,148 @@ export const ContainerHeader = styled.h1`
   }
 `;
 
-export const PokemonDescription = styled.section``;
+export const PokemonDescription = styled.section`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 
-export const PokemonStats = styled.section``;
+  @media (${mediaBreak.mdMin}) {
+    flex-direction: row;
+  }
+`;
 
-export const PokemonStat = styled.li``;
+export const PokemonDescriptionAside = styled.aside`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: auto;
+
+  @media (${mediaBreak.mdMin}) {
+    max-width: 50%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+
+    background-image: url(${LogoPokeball});
+    background-size: 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    max-width: 365px;
+
+    @media (${mediaBreak.mdMin}) {
+    }
+
+    @media (${mediaBreak.lgMin}) {
+    }
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    list-style: none;
+
+    li {
+      margin: 3px;
+
+      @media (${mediaBreak.lgMin}) {
+        margin: 5px;
+      }
+    }
+  }
+`;
+
+export const PokemonDescriptionAbout = styled.article`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  height: auto;
+
+  padding: 20px 40px;
+  margin: 10px -20px;
+
+  background: #ffffff;
+  border-radius: 10px;
+
+  @media (${mediaBreak.mdMin}) {
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 100%;
+
+    list-style: none;
+
+    li {
+      display: flex;
+      flex-direction: row;
+
+      width: 100%;
+      height: auto;
+
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      div {
+        width: 50%;
+        height: auto;
+      }
+    }
+  }
+`;
+
+export const PokemonStats = styled.section`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: auto;
+
+  padding: 20px 40px;
+  margin: 10px -20px;
+
+  background: #ffffff;
+  border-radius: 10px;
+
+  @media (${mediaBreak.mdMin}) {
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    li {
+      width: 50%;
+      margin-bottom: 10px;
+    }
+  }
+`;
