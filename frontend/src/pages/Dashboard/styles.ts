@@ -148,8 +148,9 @@ export const PokemonItem = styled.li<PokemonItemProps>`
     }
 
     strong {
-      font-weight: bold;
       font-size: 16px;
+      font-weight: bold;
+      text-transform: capitalize;
 
       margin-bottom: 4px;
 
