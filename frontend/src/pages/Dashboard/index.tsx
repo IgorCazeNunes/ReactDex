@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import Header from '../../components/Header';
 import TypeBadge from '../../components/TypeBadge';
+import api from '../../services/api';
 
 import {
   Container,
@@ -12,460 +13,112 @@ import {
   PokemonItemDescription,
 } from './styles';
 
-const Dashboard: React.FC = () => (
-  <Container>
-    <Header />
+interface PokemonListData {
+  name: string;
+  url: string;
+}
 
-    <Content>
-      <PokemonList>
-        <PokemonItem type="dragon">
-          <Link to="/details/3">
-            <strong>003 Charizard</strong>
+interface PokemonData {
+  id: number;
+  name: string;
+  sprites: {
+    other: {
+      'official-artwork': {
+        // eslint-disable-next-line camelcase
+        front_default: string;
+      };
+    };
+  };
+  types: Array<TypeData>;
+}
 
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
+interface TypeData {
+  slot: number;
+  type: {
+    name:
+      | 'normal'
+      | 'fire'
+      | 'fighting'
+      | 'water'
+      | 'flying'
+      | 'grass'
+      | 'poison'
+      | 'electric'
+      | 'ground'
+      | 'psychic'
+      | 'rock'
+      | 'ice'
+      | 'bug'
+      | 'dragon'
+      | 'ghost'
+      | 'dark'
+      | 'steel'
+      | 'fairy';
+  };
+}
 
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
+const Dashboard: React.FC = () => {
+  const [pokemonList, setPokemonList] = useState<PokemonData[]>([]);
 
-        <PokemonItem type="fighting">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
+  const getPokemonList = useCallback(async () => {
+    const { data } = await api.get(`pokemon`);
 
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
+    const dataResults: PokemonListData[] = data.results;
 
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
+    const pokemonsPromise = await dataResults.map(async pokemon => {
+      const response = await api.get<PokemonData>(`pokemon/${pokemon.name}`);
+      return response.data;
+    });
 
-                <li>
-                  <TypeBadge type="fighting" />
-                </li>
-              </ul>
+    const pokemons = await Promise.all(pokemonsPromise);
 
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
+    setPokemonList([...pokemonList, ...pokemons]);
+  }, [pokemonList]);
 
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
+  useEffect(() => {
+    getPokemonList();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
+  return (
+    <Container>
+      <Header />
 
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
+      <Content>
+        <PokemonList>
+          {pokemonList.map(pokemon => (
+            <PokemonItem key={pokemon.id} type={pokemon.types[0].type.name}>
+              <Link to={`/details/${pokemon.id}`}>
+                <strong>{pokemon.name}</strong>
 
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
+                <PokemonItemDescription>
+                  <ul>
+                    {pokemon.types.map(typeData => (
+                      <li key={pokemon.id + typeData.type.name}>
+                        <TypeBadge type={typeData.type.name} />
+                      </li>
+                    ))}
+                  </ul>
 
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
+                  <img
+                    src={
+                      pokemon.sprites.other['official-artwork'].front_default
+                    }
+                    alt={pokemon.name}
+                  />
 
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
-
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
-
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
-
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
-
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
-
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
-
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
-
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
-
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
-
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
-
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
-
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
-
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 Charizard</strong>
-
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-                <li>Fighting</li>
-              </ul>
-
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
-
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
-
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
-
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
-
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
-
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
-
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
-
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
-
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
-
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
-
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
-
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
-
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
-
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
-
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
-
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
-
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-
-        <PokemonItem type="fire">
-          <Link to="/details/3">
-            <strong>003 - Charizard</strong>
-
-            <PokemonItemDescription>
-              <ul>
-                <li>
-                  <TypeBadge type="fire" />
-                </li>
-                <li>
-                  <TypeBadge type="dragon" />
-                </li>
-              </ul>
-
-              <img
-                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                alt="Charizard"
-              />
-            </PokemonItemDescription>
-          </Link>
-        </PokemonItem>
-      </PokemonList>
-    </Content>
-  </Container>
-);
+                  {/* <img
+                    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                    alt="Charizard"
+                  /> */}
+                </PokemonItemDescription>
+              </Link>
+            </PokemonItem>
+          ))}
+        </PokemonList>
+      </Content>
+    </Container>
+  );
+};
 
 export default Dashboard;
