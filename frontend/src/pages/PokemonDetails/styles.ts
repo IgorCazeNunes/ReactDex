@@ -159,6 +159,7 @@ export const PokemonAside = styled.aside`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 
   height: auto;
 
