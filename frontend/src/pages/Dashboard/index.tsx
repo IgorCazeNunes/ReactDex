@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 import TypeBadge from '../../components/TypeBadge';
 
-import CharizardImage from '../../assets/charizard-render.png';
-
 import {
   Container,
   Content,
@@ -34,7 +32,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -58,7 +59,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -77,7 +81,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -96,7 +103,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -115,7 +125,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -134,7 +147,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -153,7 +169,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -172,7 +191,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -191,7 +213,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -210,7 +235,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -230,7 +258,10 @@ const Dashboard: React.FC = () => (
                 <li>Fighting</li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -249,7 +280,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -268,7 +302,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -287,7 +324,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -306,7 +346,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -325,7 +368,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -344,7 +390,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -363,7 +412,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -382,7 +434,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
@@ -401,7 +456,10 @@ const Dashboard: React.FC = () => (
                 </li>
               </ul>
 
-              <img src={CharizardImage} alt="Charizard" />
+              <img
+                src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
+                alt="Charizard"
+              />
             </PokemonItemDescription>
           </Link>
         </PokemonItem>
