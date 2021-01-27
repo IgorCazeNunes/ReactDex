@@ -43,14 +43,12 @@ export const Content = styled.main`
     font-weight: bold;
     line-height: 2;
     text-transform: capitalize;
-    white-space: nowrap;
   }
 
   h3 {
     font-size: 1.25rem;
     font-weight: bold;
     text-transform: capitalize;
-    white-space: nowrap;
   }
 `;
 

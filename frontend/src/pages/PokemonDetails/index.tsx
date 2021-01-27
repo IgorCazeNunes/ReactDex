@@ -97,27 +97,27 @@ const PokemonDetails: React.FC = () => (
               </li>
 
               <li>
-                <h3>speed</h3>
+                <h3>attack</h3>
                 <span> 123</span>
               </li>
 
               <li>
-                <h3>atk</h3>
+                <h3>defense</h3>
                 <span>123</span>
               </li>
 
               <li>
-                <h3>sp. atk</h3>
+                <h3>sp. attack</h3>
                 <span>123</span>
               </li>
 
               <li>
-                <h3>def</h3>
+                <h3>sp. defense</h3>
                 <span>123</span>
               </li>
 
               <li>
-                <h3>sp. def</h3>
+                <h3>speed</h3>
                 <span>123</span>
               </li>
             </ul>
