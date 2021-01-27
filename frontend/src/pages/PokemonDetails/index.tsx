@@ -10,8 +10,8 @@ import {
   Content,
   ContainerHeader,
   PokemonDescription,
-  PokemonDescriptionAside,
-  PokemonDescriptionAbout,
+  PokemonAside,
+  PokemonAbout,
   PokemonStats,
 } from './styles';
 
@@ -30,7 +30,7 @@ const PokemonDetails: React.FC = () => (
       </ContainerHeader>
 
       <PokemonDescription>
-        <PokemonDescriptionAside>
+        <PokemonAside>
           <img
             src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
             alt="Charizard"
@@ -45,83 +45,85 @@ const PokemonDetails: React.FC = () => (
               <TypeBadge type="dragon" />
             </li>
           </ul>
-        </PokemonDescriptionAside>
+        </PokemonAside>
 
-        <PokemonDescriptionAbout>
-          <h2>About</h2>
+        <div>
+          <PokemonAbout>
+            <h2>About</h2>
 
-          <ul>
-            <li>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-                ratione maxime atque fugit at enim et rerum eius accusantium,
-                neque soluta quisquam! Eum voluptatibus est iste animi, officiis
-                molestias minus!
-              </p>
-            </li>
+            <ul>
+              <li>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
+                  ratione maxime atque fugit at enim et rerum eius accusantium,
+                  neque soluta quisquam! Eum voluptatibus est iste animi,
+                  officiis molestias minus!
+                </p>
+              </li>
 
-            <li>
-              <div>
-                <h3>Height:</h3>
-                <span>1.7m</span>
-              </div>
+              <li>
+                <div>
+                  <h3>Height:</h3>
+                  <span>1.7m</span>
+                </div>
 
-              <div>
-                <h3>Weight:</h3>
-                <span>905kg</span>
-              </div>
-            </li>
+                <div>
+                  <h3>Weight:</h3>
+                  <span>905kg</span>
+                </div>
+              </li>
 
-            <li>
-              <div>
-                <h3>Habitat:</h3>
-                <span>Mountain</span>
-              </div>
+              <li>
+                <div>
+                  <h3>Habitat:</h3>
+                  <span>Mountain</span>
+                </div>
 
-              <div>
-                <h3>Egg Group:</h3>
-                <span>Monster Dragon</span>
-              </div>
-            </li>
-          </ul>
-        </PokemonDescriptionAbout>
+                <div>
+                  <h3>Egg Group:</h3>
+                  <span>Monster Dragon</span>
+                </div>
+              </li>
+            </ul>
+          </PokemonAbout>
+
+          <PokemonStats>
+            <h2>Stats</h2>
+
+            <ul>
+              <li>
+                <h3>hp</h3>
+                <span>123</span>
+              </li>
+
+              <li>
+                <h3>speed</h3>
+                <span> 123</span>
+              </li>
+
+              <li>
+                <h3>atk</h3>
+                <span>123</span>
+              </li>
+
+              <li>
+                <h3>sp. atk</h3>
+                <span>123</span>
+              </li>
+
+              <li>
+                <h3>def</h3>
+                <span>123</span>
+              </li>
+
+              <li>
+                <h3>sp. def</h3>
+                <span>123</span>
+              </li>
+            </ul>
+          </PokemonStats>
+        </div>
       </PokemonDescription>
-
-      <PokemonStats>
-        <h2>Stats</h2>
-
-        <ul>
-          <li>
-            <h3>hp</h3>
-            <span>123</span>
-          </li>
-
-          <li>
-            <h3>speed</h3>
-            <span> 123</span>
-          </li>
-
-          <li>
-            <h3>atk</h3>
-            <span>123</span>
-          </li>
-
-          <li>
-            <h3>sp. atk</h3>
-            <span>123</span>
-          </li>
-
-          <li>
-            <h3>def</h3>
-            <span>123</span>
-          </li>
-
-          <li>
-            <h3>sp. def</h3>
-            <span>123</span>
-          </li>
-        </ul>
-      </PokemonStats>
     </Content>
   </Container>
 );

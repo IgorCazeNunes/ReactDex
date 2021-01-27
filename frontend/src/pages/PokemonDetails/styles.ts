@@ -137,9 +137,26 @@ export const PokemonDescription = styled.section`
   @media (${mediaBreak.mdMin}) {
     flex-direction: row;
   }
+
+  div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+
+    margin: 10px -20px;
+
+    @media (${mediaBreak.mdMin}) {
+      margin: 0;
+      margin-left: 20px;
+
+      background: transparent;
+    }
+  }
 `;
 
-export const PokemonDescriptionAside = styled.aside`
+export const PokemonAside = styled.aside`
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -148,7 +165,7 @@ export const PokemonDescriptionAside = styled.aside`
   height: auto;
 
   @media (${mediaBreak.mdMin}) {
-    max-width: 50%;
+    max-width: 40%;
   }
 
   img {
@@ -186,22 +203,20 @@ export const PokemonDescriptionAside = styled.aside`
   }
 `;
 
-export const PokemonDescriptionAbout = styled.article`
+export const PokemonAbout = styled.article`
   flex: 1;
   display: flex;
   flex-direction: column;
 
   height: auto;
 
-  padding: 20px 40px;
-  margin: 10px -20px;
+  padding: 20px;
 
   background: #ffffff;
   border-radius: 10px;
 
   @media (${mediaBreak.mdMin}) {
-    margin: 0;
-    margin-left: 20px;
+    padding: 20px 40px;
   }
 
   ul {
@@ -232,6 +247,8 @@ export const PokemonDescriptionAbout = styled.article`
       div {
         width: 50%;
         height: auto;
+
+        margin: 0;
       }
     }
   }
@@ -245,15 +262,14 @@ export const PokemonStats = styled.section`
 
   height: auto;
 
-  padding: 20px 40px;
-  margin: 10px -20px;
+  padding: 20px;
 
   background: #ffffff;
   border-radius: 10px;
 
   @media (${mediaBreak.mdMin}) {
-    margin: 0;
     margin-top: 20px;
+    padding: 20px 40px;
   }
 
   ul {
