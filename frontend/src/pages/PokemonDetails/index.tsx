@@ -102,7 +102,7 @@ interface PokemonData {
 const PokemonDetails: React.FC = () => {
   const { params } = useRouteMatch<{ id: string }>();
 
-  const [pokemon, setPokemon] = useState<PokemonData>({} as PokemonData);
+  const [pokemon, setPokemon] = useState<PokemonData>();
 
   const getPokemon = useCallback(async (pokemonId: string) => {
     const { data: pokemonData } = await api.get<PokemonRequest>(
@@ -163,7 +163,7 @@ const PokemonDetails: React.FC = () => {
             <span>Back</span>
           </Link>
 
-          <span>003 Charizard</span>
+          <span>{`${pokemon?.id} ${pokemon?.name}`}</span>
         </ContainerHeader>
 
         <PokemonDescription>
@@ -173,14 +173,14 @@ const PokemonDetails: React.FC = () => {
               alt="Charizard"
             />
 
-            <ul>
-              <li>
-                <TypeBadge type="fire" />
-              </li>
+            {/* <img src={pokemon?.sprites.front_default} alt={pokemon?.name} /> */}
 
-              <li>
-                <TypeBadge type="dragon" />
-              </li>
+            <ul>
+              {pokemon?.types.map(typeData => (
+                <li key={typeData.type.name}>
+                  <TypeBadge type={typeData.type.name} />
+                </li>
+              ))}
             </ul>
           </PokemonAside>
 
@@ -190,35 +190,35 @@ const PokemonDetails: React.FC = () => {
 
               <ul>
                 <li>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Iusto ratione maxime atque fugit at enim et rerum eius
-                    accusantium, neque soluta quisquam! Eum voluptatibus est
-                    iste animi, officiis molestias minus!
-                  </p>
+                  <p>{pokemon?.description}</p>
                 </li>
 
                 <li>
                   <div>
                     <h3>Height:</h3>
-                    <span>1.7m</span>
+                    <span>{`${pokemon?.height}m`}</span>
                   </div>
 
                   <div>
                     <h3>Weight:</h3>
-                    <span>905kg</span>
+                    <span>{`${pokemon?.weight}kg`}</span>
                   </div>
                 </li>
 
                 <li>
                   <div>
                     <h3>Habitat:</h3>
-                    <span>Mountain</span>
+                    <span>{pokemon?.habitat.name}</span>
                   </div>
 
                   <div>
                     <h3>Egg Group:</h3>
-                    <span>Monster Dragon</span>
+                    <span>
+                      {
+                        // eslint-disable-next-line camelcase
+                        pokemon?.egg_groups.map(egg_group => egg_group.name)
+                      }
+                    </span>
                   </div>
                 </li>
               </ul>
@@ -228,35 +228,12 @@ const PokemonDetails: React.FC = () => {
               <h2>Stats</h2>
 
               <ul>
-                <li>
-                  <h3>hp</h3>
-                  <span>123</span>
-                </li>
-
-                <li>
-                  <h3>attack</h3>
-                  <span> 123</span>
-                </li>
-
-                <li>
-                  <h3>defense</h3>
-                  <span>123</span>
-                </li>
-
-                <li>
-                  <h3>sp. attack</h3>
-                  <span>123</span>
-                </li>
-
-                <li>
-                  <h3>sp. defense</h3>
-                  <span>123</span>
-                </li>
-
-                <li>
-                  <h3>speed</h3>
-                  <span>123</span>
-                </li>
+                {pokemon?.stats.map(statData => (
+                  <li key={statData.stat.name}>
+                    <h3>{statData.stat.name}</h3>
+                    <span>{statData.base_stat}</span>
+                  </li>
+                ))}
               </ul>
             </PokemonStats>
           </div>
