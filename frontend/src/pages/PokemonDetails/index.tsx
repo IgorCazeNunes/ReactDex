@@ -77,6 +77,7 @@ interface PokemonData {
   name: string;
   height: number;
   weight: number;
+  description: string;
   sprites: {
     // eslint-disable-next-line camelcase
     front_default: string;
@@ -96,17 +97,6 @@ interface PokemonData {
   egg_groups: Array<{
     name: string;
   }>;
-  // eslint-disable-next-line camelcase
-  flavor_text_entries: Array<{
-    // eslint-disable-next-line camelcase
-    flavor_text: string;
-    language: {
-      name: string;
-    };
-    version: {
-      name: string;
-    };
-  }>;
 }
 
 const PokemonDetails: React.FC = () => {
@@ -125,11 +115,27 @@ const PokemonDetails: React.FC = () => {
 
     const id = formatIdToString(Number.parseFloat(pokemonId));
 
+    let descriptions = pokemonSpeciesData.flavor_text_entries.filter(
+      flavorText =>
+        flavorText.language.name === 'en' &&
+        (flavorText.version.name === 'sword' ||
+          flavorText.version.name === 'alpha-sapphire' ||
+          flavorText.version.name === 'ermerald' ||
+          flavorText.version.name === 'black'),
+    );
+
+    if (descriptions.length < 0) {
+      descriptions = pokemonSpeciesData.flavor_text_entries.filter(
+        flavorText => flavorText.language.name === 'en',
+      );
+    }
+
     setPokemon({
       id,
       name: pokemonData.name,
       height: pokemonData.height,
       weight: pokemonData.weight,
+      description: descriptions[0].flavor_text,
       sprites: {
         front_default:
           pokemonData.sprites.other['official-artwork'].front_default,
@@ -138,7 +144,6 @@ const PokemonDetails: React.FC = () => {
       stats: pokemonData.stats,
       habitat: pokemonSpeciesData.habitat,
       egg_groups: pokemonSpeciesData.egg_groups,
-      flavor_text_entries: pokemonSpeciesData.flavor_text_entries,
     });
   }, []);
 
