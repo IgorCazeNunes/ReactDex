@@ -154,8 +154,16 @@ export const PokemonItem = styled.li<PokemonItemProps>`
 
       margin-bottom: 4px;
 
-      @media (min-width: 1024px) {
+      @media (${mediaBreak.lgMin}) {
         font-size: 20px;
+      }
+
+      span {
+        display: none;
+
+        @media (${mediaBreak.mdMin}) {
+          display: inline-flex;
+        }
       }
     }
   }

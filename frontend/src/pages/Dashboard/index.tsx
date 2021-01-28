@@ -91,8 +91,8 @@ const Dashboard: React.FC = () => {
             <PokemonItem key={pokemon.id} type={pokemon.types[0].type.name}>
               <Link to={`/details/${pokemon.id}`}>
                 <strong>
-                  <span>{`${formatIdToString(pokemon.id)} - `}</span>
-                  {pokemon.name}
+                  <span>{`${formatIdToString(pokemon.id)} -`}</span>
+                  {` ${pokemon.name}`}
                 </strong>
 
                 <PokemonItemDescription>
