@@ -33,7 +33,7 @@ interface PokemonData {
   types: Array<TypeData>;
 }
 
-interface TypeData {
+export interface TypeData {
   slot: number;
   type: {
     name:

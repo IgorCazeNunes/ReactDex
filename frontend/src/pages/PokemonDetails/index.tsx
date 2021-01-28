@@ -1,9 +1,11 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useCallback, useEffect, useState } from 'react';
+import { Link, useRouteMatch } from 'react-router-dom';
 import { FiChevronLeft } from 'react-icons/fi';
 
+import { clearFix } from 'polished';
 import Header from '../../components/Header';
 import TypeBadge from '../../components/TypeBadge';
+import { TypeData } from '../Dashboard';
 
 import {
   Container,
@@ -15,30 +17,8 @@ import {
   PokemonStats,
 } from './styles';
 
-interface TypeData {
-  slot: number;
-  type: {
-    name:
-      | 'normal'
-      | 'fire'
-      | 'fighting'
-      | 'water'
-      | 'flying'
-      | 'grass'
-      | 'poison'
-      | 'electric'
-      | 'ground'
-      | 'psychic'
-      | 'rock'
-      | 'ice'
-      | 'bug'
-      | 'dragon'
-      | 'ghost'
-      | 'dark'
-      | 'steel'
-      | 'fairy';
-  };
-}
+import api from '../../services/api';
+import formatIdToString from '../../utils/formatIdToString';
 
 interface PokemonRequest {
   name: string;
@@ -98,12 +78,8 @@ interface PokemonData {
   height: number;
   weight: number;
   sprites: {
-    other: {
-      'official-artwork': {
-        // eslint-disable-next-line camelcase
-        front_default: string;
-      };
-    };
+    // eslint-disable-next-line camelcase
+    front_default: string;
   };
   habitat: {
     name: string;
@@ -134,6 +110,43 @@ interface PokemonData {
 }
 
 const PokemonDetails: React.FC = () => {
+  const { params } = useRouteMatch<{ id: string }>();
+
+  const [pokemon, setPokemon] = useState<PokemonData>({} as PokemonData);
+
+  const getPokemon = useCallback(async (pokemonId: string) => {
+    const { data: pokemonData } = await api.get<PokemonRequest>(
+      `pokemon/${pokemonId}`,
+    );
+
+    const { data: pokemonSpeciesData } = await api.get<PokemonSpeciesRequest>(
+      `pokemon-species/${pokemonId}`,
+    );
+
+    const id = formatIdToString(Number.parseFloat(pokemonId));
+
+    setPokemon({
+      id,
+      name: pokemonData.name,
+      height: pokemonData.height,
+      weight: pokemonData.weight,
+      sprites: {
+        front_default:
+          pokemonData.sprites.other['official-artwork'].front_default,
+      },
+      types: pokemonData.types,
+      stats: pokemonData.stats,
+      habitat: pokemonSpeciesData.habitat,
+      egg_groups: pokemonSpeciesData.egg_groups,
+      flavor_text_entries: pokemonSpeciesData.flavor_text_entries,
+    });
+  }, []);
+
+  useEffect(() => {
+    getPokemon(params.id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <Container>
       <Header />
