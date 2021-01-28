@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Header from '../../components/Header';
 import TypeBadge from '../../components/TypeBadge';
 import api from '../../services/api';
+import formatIdToString from '../../utils/formatIdToString';
 
 import {
   Container,
@@ -89,7 +90,10 @@ const Dashboard: React.FC = () => {
           {pokemonList.map(pokemon => (
             <PokemonItem key={pokemon.id} type={pokemon.types[0].type.name}>
               <Link to={`/details/${pokemon.id}`}>
-                <strong>{pokemon.name}</strong>
+                <strong>
+                  <span>{`${formatIdToString(pokemon.id)} - `}</span>
+                  {pokemon.name}
+                </strong>
 
                 <PokemonItemDescription>
                   <ul>
