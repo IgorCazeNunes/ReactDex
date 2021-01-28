@@ -108,9 +108,12 @@ const PokemonDetails: React.FC = () => {
     const height = `${pokemonData.height / 10}m`;
     const weight = `${pokemonData.weight / 10}kg`;
     const sprite = pokemonData.sprites.other['official-artwork'].front_default;
-    const eggGroup = pokemonSpeciesData.egg_groups
-      .map(egg => egg.name)
-      .join(' ');
+
+    let eggGroup = 'Unknown Egg Group';
+
+    if (pokemonSpeciesData.egg_groups.length) {
+      eggGroup = pokemonSpeciesData.egg_groups.map(egg => egg.name).join(' ');
+    }
 
     let habitat = 'Unknown Habitat';
 
