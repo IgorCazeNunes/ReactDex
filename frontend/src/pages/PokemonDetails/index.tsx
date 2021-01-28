@@ -107,11 +107,16 @@ const PokemonDetails: React.FC = () => {
     const id = formatIdToString(Number.parseFloat(pokemonId));
     const height = `${pokemonData.height / 10}m`;
     const weight = `${pokemonData.weight / 10}kg`;
-    const habitat = pokemonSpeciesData.habitat.name;
     const sprite = pokemonData.sprites.other['official-artwork'].front_default;
     const eggGroup = pokemonSpeciesData.egg_groups
       .map(egg => egg.name)
       .join(' ');
+
+    let habitat = 'Unknown Habitat';
+
+    if (pokemonSpeciesData.habitat) {
+      habitat = pokemonSpeciesData.habitat.name;
+    }
 
     let descriptions = pokemonSpeciesData.flavor_text_entries.filter(
       flavorText =>
