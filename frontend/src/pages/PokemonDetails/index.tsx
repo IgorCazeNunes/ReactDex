@@ -120,7 +120,7 @@ const PokemonDetails: React.FC = () => {
         flavorText.language.name === 'en' &&
         (flavorText.version.name === 'sword' ||
           flavorText.version.name === 'alpha-sapphire' ||
-          flavorText.version.name === 'ermerald' ||
+          flavorText.version.name === 'emerald' ||
           flavorText.version.name === 'black'),
     );
 
