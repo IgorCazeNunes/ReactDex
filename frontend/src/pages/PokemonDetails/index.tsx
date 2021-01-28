@@ -116,8 +116,8 @@ const PokemonDetails: React.FC = () => {
 
     const id = formatIdToString(Number.parseFloat(pokemonId));
 
-    const height = `${formatIntValueToDecimalOne(pokemonData.height)}m`;
-    const weight = `${formatIntValueToDecimalOne(pokemonData.weight)}kg`;
+    const height = `${pokemonData.height / 10}m`;
+    const weight = `${pokemonData.weight / 10}kg`;
 
     let descriptions = pokemonSpeciesData.flavor_text_entries.filter(
       flavorText =>
