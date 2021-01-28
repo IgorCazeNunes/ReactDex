@@ -19,6 +19,7 @@ import {
 
 import api from '../../services/api';
 import formatIdToString from '../../utils/formatIdToString';
+import formatIntValueToDecimalOne from '../../utils/formatIntValueToDecimalOne';
 
 interface PokemonRequest {
   name: string;
@@ -75,8 +76,8 @@ interface PokemonSpeciesRequest {
 interface PokemonData {
   id: string;
   name: string;
-  height: number;
-  weight: number;
+  height: string;
+  weight: string;
   description: string;
   sprites: {
     // eslint-disable-next-line camelcase
@@ -115,6 +116,9 @@ const PokemonDetails: React.FC = () => {
 
     const id = formatIdToString(Number.parseFloat(pokemonId));
 
+    const height = `${formatIntValueToDecimalOne(pokemonData.height)}m`;
+    const weight = `${formatIntValueToDecimalOne(pokemonData.weight)}kg`;
+
     let descriptions = pokemonSpeciesData.flavor_text_entries.filter(
       flavorText =>
         flavorText.language.name === 'en' &&
@@ -133,8 +137,8 @@ const PokemonDetails: React.FC = () => {
     setPokemon({
       id,
       name: pokemonData.name,
-      height: pokemonData.height,
-      weight: pokemonData.weight,
+      height,
+      weight,
       description: descriptions[0].flavor_text,
       sprites: {
         front_default:
@@ -196,12 +200,12 @@ const PokemonDetails: React.FC = () => {
                 <li>
                   <div>
                     <h3>Height:</h3>
-                    <span>{`${pokemon?.height}m`}</span>
+                    <span>{pokemon?.height}</span>
                   </div>
 
                   <div>
                     <h3>Weight:</h3>
-                    <span>{`${pokemon?.weight}kg`}</span>
+                    <span>{pokemon?.weight}</span>
                   </div>
                 </li>
 
