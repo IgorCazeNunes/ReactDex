@@ -2,7 +2,6 @@ import React, { useCallback, useEffect, useState } from 'react';
 import { Link, useRouteMatch } from 'react-router-dom';
 import { FiChevronLeft } from 'react-icons/fi';
 
-import { clearFix } from 'polished';
 import Header from '../../components/Header';
 import TypeBadge from '../../components/TypeBadge';
 import { TypeData } from '../Dashboard';
@@ -19,7 +18,6 @@ import {
 
 import api from '../../services/api';
 import formatIdToString from '../../utils/formatIdToString';
-import formatIntValueToDecimalOne from '../../utils/formatIntValueToDecimalOne';
 
 interface PokemonRequest {
   name: string;
@@ -79,12 +77,10 @@ interface PokemonData {
   height: string;
   weight: string;
   description: string;
+  habitat: string;
   sprites: {
     // eslint-disable-next-line camelcase
     front_default: string;
-  };
-  habitat: {
-    name: string;
   };
   types: Array<TypeData>;
   stats: Array<{
@@ -118,6 +114,7 @@ const PokemonDetails: React.FC = () => {
 
     const height = `${pokemonData.height / 10}m`;
     const weight = `${pokemonData.weight / 10}kg`;
+    const habitat = pokemonSpeciesData.habitat.name;
 
     let descriptions = pokemonSpeciesData.flavor_text_entries.filter(
       flavorText =>
@@ -139,6 +136,7 @@ const PokemonDetails: React.FC = () => {
       name: pokemonData.name,
       height,
       weight,
+      habitat,
       description: descriptions[0].flavor_text,
       sprites: {
         front_default:
@@ -146,7 +144,6 @@ const PokemonDetails: React.FC = () => {
       },
       types: pokemonData.types,
       stats: pokemonData.stats,
-      habitat: pokemonSpeciesData.habitat,
       egg_groups: pokemonSpeciesData.egg_groups,
     });
   }, []);
@@ -212,7 +209,7 @@ const PokemonDetails: React.FC = () => {
                 <li>
                   <div>
                     <h3>Habitat:</h3>
-                    <span>{pokemon?.habitat.name}</span>
+                    <span>{pokemon?.habitat}</span>
                   </div>
 
                   <div>
