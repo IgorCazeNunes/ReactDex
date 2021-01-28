@@ -78,6 +78,7 @@ interface PokemonData {
   weight: string;
   description: string;
   habitat: string;
+  eggGroup: string;
   sprites: {
     // eslint-disable-next-line camelcase
     front_default: string;
@@ -89,10 +90,6 @@ interface PokemonData {
     stat: {
       name: string;
     };
-  }>;
-  // eslint-disable-next-line camelcase
-  egg_groups: Array<{
-    name: string;
   }>;
 }
 
@@ -111,10 +108,12 @@ const PokemonDetails: React.FC = () => {
     );
 
     const id = formatIdToString(Number.parseFloat(pokemonId));
-
     const height = `${pokemonData.height / 10}m`;
     const weight = `${pokemonData.weight / 10}kg`;
     const habitat = pokemonSpeciesData.habitat.name;
+    const eggGroup = pokemonSpeciesData.egg_groups
+      .map(egg => egg.name)
+      .join(' ');
 
     let descriptions = pokemonSpeciesData.flavor_text_entries.filter(
       flavorText =>
@@ -131,20 +130,22 @@ const PokemonDetails: React.FC = () => {
       );
     }
 
+    const description = descriptions[0].flavor_text;
+
     setPokemon({
       id,
       name: pokemonData.name,
       height,
       weight,
       habitat,
-      description: descriptions[0].flavor_text,
+      description,
+      eggGroup,
       sprites: {
         front_default:
           pokemonData.sprites.other['official-artwork'].front_default,
       },
       types: pokemonData.types,
       stats: pokemonData.stats,
-      egg_groups: pokemonSpeciesData.egg_groups,
     });
   }, []);
 
@@ -217,7 +218,7 @@ const PokemonDetails: React.FC = () => {
                     <span>
                       {
                         // eslint-disable-next-line camelcase
-                        pokemon?.egg_groups.map(egg_group => egg_group.name)
+                        pokemon?.eggGroup
                       }
                     </span>
                   </div>
