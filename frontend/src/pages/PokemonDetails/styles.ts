@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
+import { PokemonItemProps } from '../Dashboard/styles';
+
 import LogoPokeball from '../../assets/pokeball.svg';
 
 import mediaBreak from '../../utils/mediaQueryBreakPoints';
+import typesBackgroundVariation from '../../utils/typesBackgroundVariation';
 
 export const Container = styled.div`
   display: flex;
@@ -12,13 +15,13 @@ export const Container = styled.div`
   height: 100vh;
 `;
 
-export const Content = styled.main`
+export const Content = styled.main<PokemonItemProps>`
   display: flex;
   flex-direction: column;
 
   max-width: 1360px;
 
-  background: #f08030;
+  background: ${props => typesBackgroundVariation[props.type]};
   border-radius: 10px;
 
   padding: 20px;

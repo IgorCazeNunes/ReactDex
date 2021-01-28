@@ -153,7 +153,7 @@ const PokemonDetails: React.FC = () => {
     <Container>
       <Header />
 
-      <Content>
+      <Content type={pokemon?.types[0].type.name || 'normal'}>
         <ContainerHeader>
           <Link to="/">
             <FiChevronLeft size={16} />
