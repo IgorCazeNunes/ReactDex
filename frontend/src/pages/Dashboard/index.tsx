@@ -106,11 +106,6 @@ const Dashboard: React.FC = () => {
                     }
                     alt={pokemon.name}
                   />
-
-                  {/* <img
-                    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-                    alt="Charizard"
-                  /> */}
                 </PokemonItemDescription>
               </Link>
             </PokemonItem>
