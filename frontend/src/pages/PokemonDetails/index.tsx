@@ -78,11 +78,8 @@ interface PokemonData {
   weight: string;
   description: string;
   habitat: string;
+  sprite: string;
   eggGroup: string;
-  sprites: {
-    // eslint-disable-next-line camelcase
-    front_default: string;
-  };
   types: Array<TypeData>;
   stats: Array<{
     // eslint-disable-next-line camelcase
@@ -111,6 +108,7 @@ const PokemonDetails: React.FC = () => {
     const height = `${pokemonData.height / 10}m`;
     const weight = `${pokemonData.weight / 10}kg`;
     const habitat = pokemonSpeciesData.habitat.name;
+    const sprite = pokemonData.sprites.other['official-artwork'].front_default;
     const eggGroup = pokemonSpeciesData.egg_groups
       .map(egg => egg.name)
       .join(' ');
@@ -138,12 +136,9 @@ const PokemonDetails: React.FC = () => {
       height,
       weight,
       habitat,
-      description,
       eggGroup,
-      sprites: {
-        front_default:
-          pokemonData.sprites.other['official-artwork'].front_default,
-      },
+      sprite,
+      description,
       types: pokemonData.types,
       stats: pokemonData.stats,
     });
@@ -170,12 +165,7 @@ const PokemonDetails: React.FC = () => {
 
         <PokemonDescription>
           <PokemonAside>
-            <img
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/6.png"
-              alt="Charizard"
-            />
-
-            {/* <img src={pokemon?.sprites.front_default} alt={pokemon?.name} /> */}
+            <img src={pokemon?.sprite} alt={pokemon?.name} />
 
             <ul>
               {pokemon?.types.map(typeData => (
