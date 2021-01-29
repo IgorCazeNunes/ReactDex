@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import InfiniteScroll from 'react-infinite-scroller';
 
 import Header from '../../components/Header';
 import TypeBadge from '../../components/TypeBadge';
@@ -59,10 +60,11 @@ export interface TypeData {
 }
 
 const Dashboard: React.FC = () => {
+  const [nextOffset, setNextOffset] = useState('');
   const [pokemonList, setPokemonList] = useState<PokemonData[]>([]);
 
   const getPokemonList = useCallback(async () => {
-    const { data } = await api.get(`pokemon`);
+    const { data } = await api.get(`pokemon?${nextOffset}`);
 
     const dataResults: PokemonListData[] = data.results;
 
@@ -74,47 +76,59 @@ const Dashboard: React.FC = () => {
     const pokemons = await Promise.all(pokemonsPromise);
 
     setPokemonList([...pokemonList, ...pokemons]);
-  }, [pokemonList]);
+
+    const nextArray = data.next.split('?');
+    setNextOffset(nextArray[1]);
+  }, [nextOffset, pokemonList]);
 
   useEffect(() => {
     getPokemonList();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const loader = <div className="loader">Loading ...</div>;
+
   return (
     <Container>
       <Header />
 
       <Content>
-        <PokemonList>
-          {pokemonList.map(pokemon => (
-            <PokemonItem key={pokemon.id} type={pokemon.types[0].type.name}>
-              <Link to={`/details/${pokemon.id}`}>
-                <strong>
-                  <span>{`${formatIdToString(pokemon.id)} -`}</span>
-                  {` ${pokemon.name}`}
-                </strong>
+        <InfiniteScroll
+          pageStart={0}
+          loadMore={getPokemonList}
+          hasMore={true || false}
+          loader={loader}
+        >
+          <PokemonList>
+            {pokemonList.map(pokemon => (
+              <PokemonItem key={pokemon.id} type={pokemon.types[0].type.name}>
+                <Link to={`/details/${pokemon.id}`}>
+                  <strong>
+                    <span>{`${formatIdToString(pokemon.id)} -`}</span>
+                    {` ${pokemon.name}`}
+                  </strong>
 
-                <PokemonItemDescription>
-                  <ul>
-                    {pokemon.types.map(typeData => (
-                      <li key={pokemon.id + typeData.type.name}>
-                        <TypeBadge type={typeData.type.name} />
-                      </li>
-                    ))}
-                  </ul>
+                  <PokemonItemDescription>
+                    <ul>
+                      {pokemon.types.map(typeData => (
+                        <li key={pokemon.id + typeData.type.name}>
+                          <TypeBadge type={typeData.type.name} />
+                        </li>
+                      ))}
+                    </ul>
 
-                  <img
-                    src={
-                      pokemon.sprites.other['official-artwork'].front_default
-                    }
-                    alt={pokemon.name}
-                  />
-                </PokemonItemDescription>
-              </Link>
-            </PokemonItem>
-          ))}
-        </PokemonList>
+                    <img
+                      src={
+                        pokemon.sprites.other['official-artwork'].front_default
+                      }
+                      alt={pokemon.name}
+                    />
+                  </PokemonItemDescription>
+                </Link>
+              </PokemonItem>
+            ))}
+          </PokemonList>
+        </InfiniteScroll>
       </Content>
     </Container>
   );
