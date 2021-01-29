@@ -27,6 +27,8 @@ interface PokemonRequest {
   weight: number;
 
   sprites: {
+    // eslint-disable-next-line camelcase
+    front_default: string;
     other: {
       'official-artwork': {
         // eslint-disable-next-line camelcase
@@ -107,7 +109,12 @@ const PokemonDetails: React.FC = () => {
     const id = formatIdToString(Number.parseFloat(pokemonId));
     const height = `${pokemonData.height / 10}m`;
     const weight = `${pokemonData.weight / 10}kg`;
-    const sprite = pokemonData.sprites.other['official-artwork'].front_default;
+
+    let sprite = pokemonData.sprites.front_default;
+
+    if (pokemonData.sprites.other['official-artwork'].front_default) {
+      sprite = pokemonData.sprites.other['official-artwork'].front_default;
+    }
 
     let eggGroup = 'Unknown Egg Group';
 
