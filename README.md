@@ -66,10 +66,10 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ```bash
   # Clonar o repositório
-  ❯ git clone https://github.com/igorcazenunes/reactdex.git
+  ❯ git clone https://github.com/IgorCazeNunes/ReactDex.git
 
   # Entrar no diretório
-  ❯ cd reactdex
+  ❯ cd reactdex/frontend
 
   # Instalando as dependências
   ❯ yarn
