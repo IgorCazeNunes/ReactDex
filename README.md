@@ -2,30 +2,28 @@
   ReactDex
 </h1>
 
-<h2 align="center"> Desktop </h2>
+# Indice
 
-<h2 align="center" >
-  <img src='github/Dashboard - GIF.gif' width=800/>
-</h2>
+- 🖥 [Preview Desktop](#%EF%B8%8F-desktop-preview)
+- 📱 [Preview Mobile](#%EF%B8%8F-mobile-preview)
+- 📝️ [Sobre](#%EF%B8%8F-sobre)
+- 👨‍💻️ [Tecnogias utilizadas](#%EF%B8%8F-tecnogias-utilizadas)
+- 📋️ [IDE e Facilidades](#%EF%B8%8F-ide-e-facilidades)
+- 📦️ [Como baixar o projeto](#%EF%B8%8F-como-baixar-o-projeto)
+- 🤔️ [Como contribuir](#%EF%B8%8F-como-contribuir)
 
-<h2 align="center"> Mobile </h2>
+---
 
-<h3 align="center">
-  Dashboard
-</h3>
+## 🖥 Desktop Preview
+<img src='github/Dashboard - GIF.gif' width=800/>
 
-<h3 align="center">
-  <img src='github/Dashboard - Mobile.png' width=360/>
-</h3>
+## 📱 Mobile Preview
 
+###  Dashboard
+<img src='github/Dashboard - Mobile.png' width=360/>
 
-<h3 align="center">
-  Pokemon Details
-</h3>
-
-<h3 align="center">
-  <img src='github/PokemonDetails - Mobile.png' width=360/>
-</h3>
+### Pokemon Details
+<img src='github/PokemonDetails - Mobile.png' width=360/>
 
 ---
 
