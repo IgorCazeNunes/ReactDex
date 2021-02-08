@@ -3,6 +3,7 @@ import { Link, useRouteMatch } from 'react-router-dom';
 import { FiChevronLeft } from 'react-icons/fi';
 
 import Header from '../../components/Header';
+import Loader from '../../components/Loader';
 import TypeBadge from '../../components/TypeBadge';
 import { TypeData } from '../Dashboard';
 
@@ -168,84 +169,88 @@ const PokemonDetails: React.FC = () => {
     <Container>
       <Header />
 
-      <Content type={pokemon?.types[0].type.name || 'normal'}>
-        <ContainerHeader>
-          <Link to="/">
-            <FiChevronLeft size={16} />
-            <span>Back</span>
-          </Link>
+      {pokemon ? (
+        <Content type={pokemon?.types[0].type.name || 'normal'}>
+          <ContainerHeader>
+            <Link to="/">
+              <FiChevronLeft size={16} />
+              <span>Back</span>
+            </Link>
 
-          <span>{`${pokemon?.id} ${pokemon?.name}`}</span>
-        </ContainerHeader>
+            <span>{`${pokemon?.id} ${pokemon?.name}`}</span>
+          </ContainerHeader>
 
-        <PokemonDescription>
-          <PokemonAside>
-            <img src={pokemon?.sprite} alt={pokemon?.name} />
-
-            <ul>
-              {pokemon?.types.map(typeData => (
-                <li key={typeData.type.name}>
-                  <TypeBadge type={typeData.type.name} />
-                </li>
-              ))}
-            </ul>
-          </PokemonAside>
-
-          <div>
-            <PokemonAbout>
-              <h2>About</h2>
+          <PokemonDescription>
+            <PokemonAside>
+              <img src={pokemon?.sprite} alt={pokemon?.name} />
 
               <ul>
-                <li>
-                  <p>{pokemon?.description}</p>
-                </li>
-
-                <li>
-                  <div>
-                    <h3>Height:</h3>
-                    <span>{pokemon?.height}</span>
-                  </div>
-
-                  <div>
-                    <h3>Weight:</h3>
-                    <span>{pokemon?.weight}</span>
-                  </div>
-                </li>
-
-                <li>
-                  <div>
-                    <h3>Habitat:</h3>
-                    <span>{pokemon?.habitat}</span>
-                  </div>
-
-                  <div>
-                    <h3>Egg Group:</h3>
-                    <span>
-                      {
-                        // eslint-disable-next-line camelcase
-                        pokemon?.eggGroup
-                      }
-                    </span>
-                  </div>
-                </li>
-              </ul>
-            </PokemonAbout>
-
-            <PokemonStats>
-              <h2>Stats</h2>
-
-              <ul>
-                {pokemon?.stats.map(statData => (
-                  <li key={statData.stat.name}>
-                    <h3>{statData.stat.name}</h3>
-                    <span>{statData.base_stat}</span>
+                {pokemon?.types.map(typeData => (
+                  <li key={typeData.type.name}>
+                    <TypeBadge type={typeData.type.name} />
                   </li>
                 ))}
               </ul>
-            </PokemonStats>
-          </div>
-        </PokemonDescription>
-      </Content>
+            </PokemonAside>
+
+            <div>
+              <PokemonAbout>
+                <h2>About</h2>
+
+                <ul>
+                  <li>
+                    <p>{pokemon?.description}</p>
+                  </li>
+
+                  <li>
+                    <div>
+                      <h3>Height:</h3>
+                      <span>{pokemon?.height}</span>
+                    </div>
+
+                    <div>
+                      <h3>Weight:</h3>
+                      <span>{pokemon?.weight}</span>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div>
+                      <h3>Habitat:</h3>
+                      <span>{pokemon?.habitat}</span>
+                    </div>
+
+                    <div>
+                      <h3>Egg Group:</h3>
+                      <span>
+                        {
+                          // eslint-disable-next-line camelcase
+                          pokemon?.eggGroup
+                        }
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </PokemonAbout>
+
+              <PokemonStats>
+                <h2>Stats</h2>
+
+                <ul>
+                  {pokemon?.stats.map(statData => (
+                    <li key={statData.stat.name}>
+                      <h3>{statData.stat.name}</h3>
+                      <span>{statData.base_stat}</span>
+                    </li>
+                  ))}
+                </ul>
+              </PokemonStats>
+            </div>
+          </PokemonDescription>
+        </Content>
+      ) : (
+        <Loader />
+      )}
     </Container>
   );
 };
