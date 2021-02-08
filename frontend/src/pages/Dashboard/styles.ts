@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { darken } from 'polished';
 
 import LogoPokeball from '../../assets/pokeball.svg';
@@ -27,6 +27,27 @@ export interface PokemonItemProps {
     | 'steel'
     | 'fairy';
 }
+
+const spin = keyframes`
+  100% {
+    transform: rotate(180deg);
+  }
+`;
+
+export const Loader = styled.div`
+  display: flex;
+  align-items: center;
+
+  strong {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  svg {
+    margin: 0 5px;
+    animation: ${spin} 1s infinite;
+  }
+`;
 
 export const Container = styled.div`
   display: flex;

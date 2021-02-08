@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FiLoader } from 'react-icons/fi';
 import InfiniteScroll from 'react-infinite-scroller';
 
 import Header from '../../components/Header';
@@ -8,6 +9,7 @@ import api from '../../services/api';
 import formatIdToString from '../../utils/formatIdToString';
 
 import {
+  Loader,
   Container,
   Content,
   PokemonList,
@@ -86,7 +88,12 @@ const Dashboard: React.FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const loader = <div className="loader">Loading ...</div>;
+  const loader = (
+    <Loader>
+      <FiLoader size={18} />
+      <strong>Loading ...</strong>
+    </Loader>
+  );
 
   return (
     <Container>
