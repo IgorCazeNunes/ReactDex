@@ -18,6 +18,8 @@ export const Container = styled.div`
 export const Content = styled.main<PokemonItemProps>`
   display: flex;
   flex-direction: column;
+  align-self: center;
+  justify-content: center;
 
   max-width: 1360px;
 
