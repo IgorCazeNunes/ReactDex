@@ -66,10 +66,10 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ```bash
   # Clonar o repositório
-  ❯ git clone https://github.com/rafaelsouz/gofinances-web.git
+  ❯ git clone https://github.com/igorcazenunes/reactdex.git
 
   # Entrar no diretório
-  ❯ cd gofinances-web
+  ❯ cd reactdex
 
   # Instalando as dependências
   ❯ yarn
