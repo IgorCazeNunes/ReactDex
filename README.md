@@ -2,6 +2,33 @@
   ReactDex
 </h1>
 
+<h2 align="center"> Desktop </h2>
+
+<h2 align="center" >
+  <img src='github/Dashboard - GIF.gif' width=800/>
+</h2>
+
+<h2 align="center"> Mobile </h2>
+
+<h3 align="center">
+  Dashboard
+</h3>
+
+<h3 align="center">
+  <img src='github/Dashboard - Mobile.png' width=360/>
+</h3>
+
+
+<h3 align="center">
+  Pokemon Details
+</h3>
+
+<h3 align="center">
+  <img src='github/PokemonDetails - Mobile.png' width=360/>
+</h3>
+
+---
+
 # Indice
 
 - 📝️ [Sobre](#%EF%B8%8F-sobre)
