@@ -4,8 +4,8 @@
 
 # Indice
 
-- 🖥 [Preview Desktop](#%EF%B8%8F-desktop-preview)
-- 📱 [Preview Mobile](#%EF%B8%8F-mobile-preview)
+- 🖥 [Desktop Preview](#%EF%B8%8F-desktop-preview)
+- 📱 [Mobile Preview](#%EF%B8%8F-mobile-preview)
 - 📝️ [Sobre](#%EF%B8%8F-sobre)
 - 👨‍💻️ [Tecnogias utilizadas](#%EF%B8%8F-tecnogias-utilizadas)
 - 📋️ [IDE e Facilidades](#%EF%B8%8F-ide-e-facilidades)
