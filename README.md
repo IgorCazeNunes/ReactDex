@@ -17,6 +17,8 @@
 ## 🖥 Desktop Preview
 <img src='github/Dashboard - GIF.gif' width=800/>
 
+---
+
 ## 📱 Mobile Preview
 
 ###  Dashboard
@@ -24,16 +26,6 @@
 
 ### Pokemon Details
 <img src='github/PokemonDetails - Mobile.png' width=360/>
-
----
-
-# Indice
-
-- 📝️ [Sobre](#%EF%B8%8F-sobre)
-- 👨‍💻️ [Tecnogias utilizadas](#%EF%B8%8F-tecnogias-utilizadas)
-- 📋️ [IDE e Facilidades](#%EF%B8%8F-ide-e-facilidades)
-- 📦️ [Como baixar o projeto](#%EF%B8%8F-como-baixar-o-projeto)
-- 🤔️ [Como contribuir](#%EF%B8%8F-como-contribuir)
 
 ---
 
