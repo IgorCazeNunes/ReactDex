@@ -5,6 +5,7 @@ import { FiChevronLeft } from 'react-icons/fi';
 import Header from '../../components/Header';
 import Loader from '../../components/Loader';
 import TypeBadge from '../../components/TypeBadge';
+import StatusBar from '../../components/StatusBar';
 import { TypeData } from '../Dashboard';
 
 import {
@@ -240,7 +241,11 @@ const PokemonDetails: React.FC = () => {
                   {pokemon?.stats.map(statData => (
                     <li key={statData.stat.name}>
                       <h3>{statData.stat.name}</h3>
-                      <span>{statData.base_stat}</span>
+
+                      <StatusBar
+                        name={statData.stat.name}
+                        baseStat={statData.base_stat}
+                      />
                     </li>
                   ))}
                 </ul>

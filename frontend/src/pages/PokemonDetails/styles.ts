@@ -289,8 +289,25 @@ export const PokemonStats = styled.section`
     list-style: none;
 
     li {
-      width: 50%;
-      margin-bottom: 10px;
+      width: 100%;
+      margin-bottom: 1rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (${mediaBreak.lgMin}) {
+        width: 46%;
+        margin: 0 4% 10px 0;
+
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 1rem;
+        }
+      }
     }
   }
 `;
