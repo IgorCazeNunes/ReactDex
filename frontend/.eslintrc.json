@@ -27,7 +27,9 @@
   "rules": {
     "react/prop-types": "off",
     "react/jsx-props-no-spreading": "off",
-    "prettier/prettier": "error",
+    "prettier/prettier": ["error", {
+     "endOfLine":"auto"
+    }],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
     "no-unused-expressions": "off",
