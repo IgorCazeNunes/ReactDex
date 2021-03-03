@@ -78,6 +78,8 @@ export const PokemonItem = styled.li<PokemonItemProps>`
 
   list-style: none;
 
+  transition: all 1s;
+
   @media (${mediaBreak.smMax}) {
     &:nth-child(2n) {
       margin-right: 0;
