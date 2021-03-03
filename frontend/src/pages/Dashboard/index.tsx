@@ -5,6 +5,8 @@ import InfiniteScroll from 'react-infinite-scroller';
 import Header from '../../components/Header';
 import Loader from '../../components/Loader';
 import TypeBadge from '../../components/TypeBadge';
+import SearchModal from '../../components/SearchModal';
+
 import api from '../../services/api';
 import formatIdToString from '../../utils/formatIdToString';
 
@@ -90,6 +92,8 @@ const Dashboard: React.FC = () => {
   return (
     <Container>
       <Header />
+
+      <SearchModal />
 
       <Content>
         <InfiniteScroll

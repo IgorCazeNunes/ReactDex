@@ -5,7 +5,7 @@ import { FiSearch, FiX } from 'react-icons/fi';
 import { Overlay, Container, SearchButton, SearchForm } from './styles';
 
 const SearchModal: React.FC = () => {
-  const [isSearchModalOpen, setIsSearchModalOpen] = useState(true);
+  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
 
   const openSearchModal = useCallback(() => {
     setIsSearchModalOpen(true);
