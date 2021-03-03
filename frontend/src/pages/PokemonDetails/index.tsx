@@ -22,6 +22,8 @@ import api from '../../services/api';
 import formatIdToString from '../../utils/formatIdToString';
 
 interface PokemonRequest {
+  id: number;
+
   name: string;
 
   height: number;
@@ -101,14 +103,14 @@ const PokemonDetails: React.FC = () => {
 
   const getPokemon = useCallback(async (pokemonId: string) => {
     const { data: pokemonData } = await api.get<PokemonRequest>(
-      `pokemon/${pokemonId}`,
+      `pokemon/${pokemonId.toLowerCase()}`,
     );
 
     const { data: pokemonSpeciesData } = await api.get<PokemonSpeciesRequest>(
-      `pokemon-species/${pokemonId}`,
+      `pokemon-species/${pokemonId.toLowerCase()}`,
     );
 
-    const id = formatIdToString(Number.parseFloat(pokemonId));
+    const id = formatIdToString(pokemonData.id);
     const height = `${pokemonData.height / 10}m`;
     const weight = `${pokemonData.weight / 10}kg`;
 
