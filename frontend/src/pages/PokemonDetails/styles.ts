@@ -39,19 +39,19 @@ export const Content = styled.main<PokemonItemProps>`
 
   p,
   span {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     text-align: justify;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     font-weight: bold;
     line-height: 2;
     text-transform: capitalize;
   }
 
   h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: bold;
     text-transform: capitalize;
   }
