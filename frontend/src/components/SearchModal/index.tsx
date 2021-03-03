@@ -37,19 +37,22 @@ const SearchModal: React.FC = () => {
     return errors;
   }, []);
 
-  const handleSearch = useCallback(async (values, { setSubmitting }) => {
-    try {
-      setIsSearchErrored(false);
+  const handleSearch = useCallback(
+    async (values, { setSubmitting }) => {
+      try {
+        setIsSearchErrored(false);
 
-      const { data } = await api.get<PokemonRequest>(
-        `pokemon/${values.searchInput.toLowerCase()}`,
-      );
+        const { data } = await api.get<PokemonRequest>(
+          `pokemon/${values.searchInput.toLowerCase()}`,
+        );
 
-      history.push(`/details/${data.name}`);
-    } catch (error) {
-      setIsSearchErrored(true);
-    }
-  }, []);
+        history.push(`/details/${data.name}`);
+      } catch (error) {
+        setIsSearchErrored(true);
+      }
+    },
+    [history],
+  );
 
   return (
     <>
