@@ -1,3 +1,4 @@
+import { FiLoader } from 'react-icons/fi';
 import styled from 'styled-components';
 import { darken } from 'polished';
 
@@ -87,63 +88,79 @@ export const Container = styled.div`
 
 export const SearchForm = styled.form`
   display: flex;
+  flex-direction: column;
 
   width: 100%;
   margin: 20px auto;
 
-  input {
-    width: 100%;
-    height: 45px;
+  div {
+    display: flex;
+    flex-direction: row;
 
-    margin: 0 auto;
-    padding: 0 10px;
+    input {
+      width: 100%;
+      height: 45px;
 
-    font-size: 1rem;
-    border: 1px solid #d0cfce;
-    outline: none;
+      margin: 0 auto;
+      padding: 0 10px;
 
-    &:focus {
-      border: 1px solid #008abf;
-      transition: 0.35s ease;
-      color: #008abf;
+      font-size: 1rem;
+      border: 1px solid #d0cfce;
+      outline: none;
 
-      &::-webkit-input-placeholder {
-        transition: opacity 0.45s ease;
-        opacity: 0;
+      &:focus {
+        border: 1px solid #008abf;
+        transition: 0.35s ease;
+        color: #008abf;
+
+        &::-webkit-input-placeholder {
+          transition: opacity 0.45s ease;
+          opacity: 0;
+        }
+
+        &::-moz-placeholder {
+          transition: opacity 0.45s ease;
+          opacity: 0;
+        }
+
+        &:-ms-placeholder {
+          transition: opacity 0.45s ease;
+          opacity: 0;
+        }
+      }
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      min-width: 3rem;
+      color: #fff;
+      background-color: #1266f1;
+      border: 0;
+
+      transition: all 0.45s;
+
+      &:hover {
+        background-color: ${darken(0.1, '#1266f1')};
       }
 
-      &::-moz-placeholder {
-        transition: opacity 0.45s ease;
-        opacity: 0;
+      &:disabled {
+        background-color: #292b2c;
       }
 
-      &:-ms-placeholder {
-        transition: opacity 0.45s ease;
-        opacity: 0;
+      svg {
+        position: relative;
+        width: 1rem;
+        height: 1rem;
       }
     }
   }
 
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  span {
+    margin-top: 0.5rem;
 
-    min-width: 3rem;
-    color: #fff;
-    background-color: #1266f1;
-    border: 0;
-
-    transition: all 0.45s;
-
-    &:hover {
-      background-color: ${darken(0.1, '#1266f1')};
-    }
-
-    svg {
-      position: relative;
-      width: 1rem;
-      height: 1rem;
-    }
+    color: #e3350d;
   }
 `;
