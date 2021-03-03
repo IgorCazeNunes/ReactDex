@@ -15,14 +15,14 @@ export const SearchButton = styled.button`
   width: 40px;
   height: 40px;
 
-  background-color: #e3350d;
+  background-color: #1266f1;
   border: none;
   border-radius: 40px;
 
   transition: all 0.4s;
 
   &:hover {
-    background-color: ${darken(0.1, '#e3350d')};
+    background-color: ${darken(0.1, '#1266f1')};
   }
 
   svg {
@@ -133,6 +133,12 @@ export const SearchForm = styled.form`
     color: #fff;
     background-color: #1266f1;
     border: 0;
+
+    transition: all 0.45s;
+
+    &:hover {
+      background-color: ${darken(0.1, '#1266f1')};
+    }
 
     svg {
       position: relative;
