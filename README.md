@@ -4,8 +4,8 @@
 
 # Indice
 
-- 🖥 [Desktop Preview](#-desktop-preview)
-- 📱 [Mobile Preview](#-mobile-preview)
+- 🖥 [Desktop Preview](#-web-desktop-preview)
+- 📱 [Mobile Preview](#-web-mobile-preview)
 - 📝️ [Sobre](#%EF%B8%8F-sobre)
 - 👨‍💻️ [Tecnogias utilizadas](#%EF%B8%8F-tecnogias-utilizadas)
 - 📋️ [IDE e Facilidades](#%EF%B8%8F-ide-e-facilidades)
@@ -14,12 +14,12 @@
 
 ---
 
-## 🖥 Desktop Preview
+## 🖥 Web Desktop Preview
 <img src='github/Dashboard - GIF.gif' width=800/>
 
 ---
 
-## 📱 Mobile Preview
+## 📱 Web Mobile Preview
 
 ###  Dashboard
 <img src='github/Dashboard - Mobile.png' width=360/>
