@@ -15,17 +15,12 @@
 ---
 
 ## 🖥 Web Desktop Preview
-<img src='github/Dashboard - GIF.gif' width=800/>
+<img src='github/Web Desktop Preview.gif' width=998/>
 
 ---
 
 ## 📱 Web Mobile Preview
-
-###  Dashboard
-<img src='github/Dashboard - Mobile.png' width=360/>
-
-### Pokemon Details
-<img src='github/PokemonDetails - Mobile.png' width=360/>
+<img src='github/Web Mobile Preview.gif' width=466/>
 
 ---
 
