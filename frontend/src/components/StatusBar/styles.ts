@@ -40,6 +40,8 @@ export const Container = styled.div<StatusData>`
       height: 1.5rem;
       border-radius: 4px;
       background: ${props => statusBackgroundVariation[props.statusName]};
+
+      transition: width ease-in 1s;
     }
 
     span {

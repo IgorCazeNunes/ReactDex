@@ -33,10 +33,8 @@ const StatusBar: React.FC<StatusBarData> = ({
   }
 
   useEffect(() => {
-    if (statInPercent < percentToMaxStat) {
-      setPercentStat(statInPercent + 1);
-    }
-  }, [statInPercent, percentToMaxStat]);
+    setPercentStat(percentToMaxStat);
+  }, [percentToMaxStat]);
 
   return (
     <Container statusName={statusName}>
