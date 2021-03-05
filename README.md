@@ -14,12 +14,12 @@
 
 ---
 
-## 🖥 Web Desktop Preview
+## 🖥 Desktop Web Preview
 <img src='github/Web Desktop Preview.gif' width=998/>
 
 ---
 
-## 📱 Web Mobile Preview
+## 📱 Desktop Mobile Preview
 <img src='github/Web Mobile Preview.gif' width=466/>
 
 ---
