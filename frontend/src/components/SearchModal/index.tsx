@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useCallback, useEffect, useState } from 'react';
 import { ErrorMessage, Field, Formik } from 'formik';
 import { useHistory } from 'react-router-dom';
@@ -96,30 +97,35 @@ const SearchModal: React.FC = () => {
               {({ handleSubmit, isSubmitting }) => (
                 <SearchForm onSubmit={handleSubmit}>
                   <div>
-                    <Field
-                      type="text"
-                      name="searchInput"
-                      list="data"
-                      placeholder="Search by name or number..."
-                    />
+                    <label htmlFor="searchInput">Pokémon Name:</label>
 
-                    <datalist id="data">
-                      {pokemonDataList.map(pokemon => (
-                        <option
-                          key={pokemon.name}
-                          value={pokemon.name}
-                          aria-label={`pokemon-${pokemon.name}`}
-                        />
-                      ))}
-                    </datalist>
+                    <div>
+                      <Field
+                        type="text"
+                        id="searchInput"
+                        name="searchInput"
+                        list="data"
+                        placeholder="Search by name or number..."
+                      />
 
-                    <button type="submit" disabled={isSubmitting}>
-                      {isSubmitting ? (
-                        <FiLoader size={18} />
-                      ) : (
-                        <FiSearch size={18} />
-                      )}
-                    </button>
+                      <datalist id="data">
+                        {pokemonDataList.map(pokemon => (
+                          <option
+                            key={pokemon.name}
+                            value={pokemon.name}
+                            aria-label={`pokemon-${pokemon.name}`}
+                          />
+                        ))}
+                      </datalist>
+
+                      <button type="submit" disabled={isSubmitting}>
+                        {isSubmitting ? (
+                          <FiLoader size={18} />
+                        ) : (
+                          <FiSearch size={18} />
+                        )}
+                      </button>
+                    </div>
                   </div>
 
                   <ErrorMessage name="searchInput" component="span" />
