@@ -100,7 +100,7 @@ const Dashboard: React.FC = () => {
           pageStart={0}
           loadMore={getPokemonList}
           hasMore={true || false}
-          loader={<Loader />}
+          loader={<Loader key="loader" />}
         >
           <PokemonList>
             {pokemonList.map(pokemon => (
