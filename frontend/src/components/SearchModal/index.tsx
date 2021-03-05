@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { ErrorMessage, Field, Formik } from 'formik';
 import { useHistory } from 'react-router-dom';
 
@@ -13,11 +13,30 @@ interface PokemonRequest {
   name: string;
 }
 
+interface PokemonDataList {
+  name: string;
+  url: string;
+}
+
 const SearchModal: React.FC = () => {
   const history = useHistory();
 
+  const [pokemonDataList, setPokemonDataList] = useState<PokemonDataList[]>([]);
   const [isSearchErrored, setIsSearchErrored] = useState(false);
   const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
+
+  const getPokemonDataList = useCallback(async () => {
+    const { data } = await api.get('pokemon?limit=898&offset=0');
+
+    const dataResults: PokemonDataList[] = data.results;
+
+    setPokemonDataList(dataResults);
+  }, []);
+
+  useEffect(() => {
+    getPokemonDataList();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const openSearchModal = useCallback(() => {
     setIsSearchModalOpen(true);
@@ -80,8 +99,19 @@ const SearchModal: React.FC = () => {
                     <Field
                       type="text"
                       name="searchInput"
+                      list="data"
                       placeholder="Search by name or number..."
                     />
+
+                    <datalist id="data">
+                      {pokemonDataList.map(pokemon => (
+                        <option
+                          key={pokemon.name}
+                          value={pokemon.name}
+                          aria-label={`pokemon-${pokemon.name}`}
+                        />
+                      ))}
+                    </datalist>
 
                     <button type="submit" disabled={isSubmitting}>
                       {isSubmitting ? (
