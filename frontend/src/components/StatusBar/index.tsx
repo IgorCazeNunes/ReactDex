@@ -20,21 +20,22 @@ const StatusBar: React.FC<StatusBarData> = ({
   baseStat,
   name,
 }: StatusBarData) => {
+  const [statusName, setStatusName] = useState<StatusName>('hp');
   const [statInPercent, setPercentStat] = useState(0);
+
   const percentToMaxStat = Math.round((baseStat * 100) / 255);
 
-  let statusName: StatusName = 'hp';
-  if (name === 'attack' || name === 'defense' || name === 'speed') {
-    statusName = name;
-  } else if (name === 'special-attack') {
-    statusName = 'special_attack';
-  } else if (name === 'special-defense') {
-    statusName = 'special_defense';
-  }
-
   useEffect(() => {
+    if (name === 'attack' || name === 'defense' || name === 'speed') {
+      setStatusName(name);
+    } else if (name === 'special-attack') {
+      setStatusName('special_attack');
+    } else if (name === 'special-defense') {
+      setStatusName('special_defense');
+    }
+
     setPercentStat(percentToMaxStat);
-  }, [percentToMaxStat]);
+  }, [name, percentToMaxStat]);
 
   return (
     <Container statusName={statusName}>
