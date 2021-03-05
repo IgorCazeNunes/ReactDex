@@ -95,65 +95,72 @@ export const SearchForm = styled.form`
 
   div {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 0.5rem;
 
-    input {
-      width: 100%;
-      height: 45px;
-
-      margin: 0 auto;
-      padding: 0 10px;
-
-      font-size: 1rem;
-      border: 1px solid #d0cfce;
-      outline: none;
-
-      &:focus {
-        border: 1px solid #008abf;
-        transition: 0.35s ease;
-        color: #008abf;
-
-        &::-webkit-input-placeholder {
-          transition: opacity 0.45s ease;
-          opacity: 0;
-        }
-
-        &::-moz-placeholder {
-          transition: opacity 0.45s ease;
-          opacity: 0;
-        }
-
-        &:-ms-placeholder {
-          transition: opacity 0.45s ease;
-          opacity: 0;
-        }
-      }
-    }
-
-    button {
+    div {
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: row;
+      gap: 0;
 
-      min-width: 3rem;
-      color: #fff;
-      background-color: #1266f1;
-      border: 0;
+      input {
+        width: 100%;
+        height: 45px;
 
-      transition: all 0.45s;
+        margin: 0 auto;
+        padding: 0 10px;
 
-      &:hover {
-        background-color: ${darken(0.1, '#1266f1')};
+        font-size: 1rem;
+        border: 1px solid #d0cfce;
+        outline: none;
+
+        &:focus {
+          border: 1px solid #008abf;
+          transition: 0.35s ease;
+          color: #008abf;
+
+          &::-webkit-input-placeholder {
+            transition: opacity 0.45s ease;
+            opacity: 0;
+          }
+
+          &::-moz-placeholder {
+            transition: opacity 0.45s ease;
+            opacity: 0;
+          }
+
+          &:-ms-placeholder {
+            transition: opacity 0.45s ease;
+            opacity: 0;
+          }
+        }
       }
 
-      &:disabled {
-        background-color: #292b2c;
-      }
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
-      svg {
-        position: relative;
-        width: 1rem;
-        height: 1rem;
+        min-width: 3rem;
+        color: #fff;
+        background-color: #1266f1;
+        border: 0;
+
+        transition: all 0.45s;
+
+        &:hover {
+          background-color: ${darken(0.1, '#1266f1')};
+        }
+
+        &:disabled {
+          background-color: #292b2c;
+        }
+
+        svg {
+          position: relative;
+          width: 1rem;
+          height: 1rem;
+        }
       }
     }
   }
