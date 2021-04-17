@@ -1,14 +1,6 @@
-/**
- * @format
- */
-
-import 'react-native';
 import React from 'react';
-import App from '../App';
+import { View } from 'react-native';
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+const App: React.FC = () => <View />;
 
-it('renders correctly', () => {
-  renderer.create(<App />);
-});
+export default App;
