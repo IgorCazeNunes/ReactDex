@@ -3,15 +3,7 @@ import { Linking } from 'react-native';
 
 import LogoPokeball from '../../assets/Pokeball.png';
 
-import {
-    Container,
-    TitleContainer,
-    TitleLogo,
-    LinksContainer,
-    LinkTouchable,
-    TitleText,
-    LinkIcon,
-} from './styles';
+import * as S from './styles';
 
 const Header: React.FC = () => {
     const handleNavigateToLinkedin = useCallback(async () => {
@@ -23,31 +15,31 @@ const Header: React.FC = () => {
     }, []);
 
     return (
-        <Container>
-            <TitleContainer>
-                <TitleLogo source={LogoPokeball} />
+        <S.Container>
+            <S.TitleContainer>
+                <S.TitleLogo source={LogoPokeball} />
 
-                <TitleText>ReactDex</TitleText>
-            </TitleContainer>
+                <S.TitleText>ReactDex</S.TitleText>
+            </S.TitleContainer>
 
-            <LinksContainer>
-                <LinkTouchable
+            <S.LinksContainer>
+                <S.LinkTouchable
                     onPress={() => {
                         handleNavigateToLinkedin();
                     }}
                 >
-                    <LinkIcon name="linkedin" />
-                </LinkTouchable>
+                    <S.LinkIcon name="linkedin" />
+                </S.LinkTouchable>
 
-                <LinkTouchable
+                <S.LinkTouchable
                     onPress={() => {
                         handleNavigateToGithub();
                     }}
                 >
-                    <LinkIcon name="github" />
-                </LinkTouchable>
-            </LinksContainer>
-        </Container>
+                    <S.LinkIcon name="github" />
+                </S.LinkTouchable>
+            </S.LinksContainer>
+        </S.Container>
     );
 };
 
