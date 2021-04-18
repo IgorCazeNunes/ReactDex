@@ -36,3 +36,22 @@ export const ReturnButtonText = styled.Text`
     font-size: 22px;
     font-family: 'ChakraPetch-SemiBold';
 `;
+
+export const HeaderContainer = styled.View`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`;
+
+export const PokemonImage = styled.Image`
+    margin: 20px;
+    margin-bottom: 0;
+
+    width: 275px;
+    height: 275px;
+`;
+
+export const BadgeContainer = styled.View`
+    display: flex;
+    flex-direction: row;
+`;
