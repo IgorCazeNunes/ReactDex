@@ -13,7 +13,7 @@ export const Container = styled.View`
     padding: 10px 20px;
     margin-bottom: 20px;
 
-    background: #e3350d;
+    background: ${props => props.theme.background.vermillion};
 `;
 
 export const TitleContainer = styled.View`
@@ -32,7 +32,7 @@ export const TitleLogo = styled.Image`
 export const TitleText = styled.Text`
     height: 100%;
 
-    color: #ffffff;
+    color: ${props => props.theme.font.white};
     font-size: 26px;
     font-family: 'ChakraPetch-SemiBold';
 `;
@@ -52,6 +52,6 @@ export const LinkTouchable = styled.TouchableOpacity`
 `;
 
 export const LinkIcon = styled(Icon)`
-    color: #ffffff;
+    color: ${props => props.theme.font.white};
     font-size: 26px;
 `;
