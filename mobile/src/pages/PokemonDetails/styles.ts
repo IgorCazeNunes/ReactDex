@@ -1,7 +1,38 @@
 import styled from 'styled-components/native';
 
+import Icon from 'react-native-vector-icons/Feather';
+
 export const Container = styled.View`
     flex: 1;
+
+    width: 100%;
+    height: 100%;
+`;
+
+export const ReturnButton = styled.TouchableOpacity`
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
+
+    position: absolute;
+    z-index: 999;
+
+    top: 15px;
+    left: 15px;
+
+    height: 50px;
+    width: auto;
+`;
+
+export const ReturnButtonIcon = styled(Icon)`
+    margin-right: 5px;
+    color: ${props => props.theme.font.dark};
+    font-size: 26px;
+`;
+
+export const ReturnButtonText = styled.Text`
+    color: ${props => props.theme.font.dark};
+    font-size: 22px;
+    font-family: 'ChakraPetch-SemiBold';
 `;

@@ -2,7 +2,6 @@ import React, { useCallback } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
 import { Text } from 'react-native';
-import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import * as S from './styles';
 
@@ -15,20 +14,17 @@ const PokemonDetails: React.FC = () => {
 
     return (
         <S.Container>
-            <TouchableOpacity
+            <S.ReturnButton
                 onPress={() => {
                     handleNavigateBack();
                 }}
             >
-                <Text
-                    style={{
-                        fontSize: 40,
-                        fontFamily: 'ChakraPetch-Medium',
-                    }}
-                >
-                    PokemonDetails
-                </Text>
-            </TouchableOpacity>
+                <S.ReturnButtonIcon name="chevron-left" />
+
+                <S.ReturnButtonText>Back</S.ReturnButtonText>
+            </S.ReturnButton>
+
+            <Text>PokemonDetails</Text>
         </S.Container>
     );
 };
