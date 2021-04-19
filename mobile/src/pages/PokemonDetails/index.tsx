@@ -33,14 +33,41 @@ const PokemonDetails: React.FC = () => {
                 <S.BadgeContainer>
                     <TypeBadge type="dragon" />
                     <TypeBadge type="flying" />
-                    <TypeBadge type="fire" />
                 </S.BadgeContainer>
             </S.HeaderContainer>
 
-            <Text>PokemonDetails</Text>
-            <Text>PokemonDetails</Text>
-            <Text>PokemonDetails</Text>
-            <Text>PokemonDetails</Text>
+            <S.MainContent>
+                <S.SectionDetails>
+                    <S.DetailsMainContainer>
+                        <S.DetailsTitle>About</S.DetailsTitle>
+                        <S.DetailsText>Lorem Ipsum Sit Amet</S.DetailsText>
+                    </S.DetailsMainContainer>
+
+                    <S.DetailsSecondaryContainer>
+                        <S.DetailsSecondaryContent>
+                            <S.DetailsTitle>Height</S.DetailsTitle>
+                            <S.DetailsText>1.7m</S.DetailsText>
+                        </S.DetailsSecondaryContent>
+
+                        <S.DetailsSecondaryContent>
+                            <S.DetailsTitle>Weight</S.DetailsTitle>
+                            <S.DetailsText>90.5KG</S.DetailsText>
+                        </S.DetailsSecondaryContent>
+                    </S.DetailsSecondaryContainer>
+
+                    <S.DetailsSecondaryContainer>
+                        <S.DetailsSecondaryContent>
+                            <S.DetailsTitle>Habitat</S.DetailsTitle>
+                            <S.DetailsText>Mountain</S.DetailsText>
+                        </S.DetailsSecondaryContent>
+
+                        <S.DetailsSecondaryContent>
+                            <S.DetailsTitle>Egg Group</S.DetailsTitle>
+                            <S.DetailsText>Monster Dragon</S.DetailsText>
+                        </S.DetailsSecondaryContent>
+                    </S.DetailsSecondaryContainer>
+                </S.SectionDetails>
+            </S.MainContent>
         </S.Container>
     );
 };

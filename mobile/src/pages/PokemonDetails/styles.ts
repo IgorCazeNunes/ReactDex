@@ -55,3 +55,17 @@ export const BadgeContainer = styled.View`
     display: flex;
     flex-direction: row;
 `;
+
+export const MainContent = styled.View``;
+
+export const SectionDetails = styled.View``;
+
+export const DetailsTitle = styled.Text``;
+
+export const DetailsText = styled.Text``;
+
+export const DetailsMainContainer = styled.View``;
+
+export const DetailsSecondaryContainer = styled.View``;
+
+export const DetailsSecondaryContent = styled.View``;
