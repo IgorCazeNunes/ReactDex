@@ -7,6 +7,7 @@ import charizardImage from '../../assets/charizard.png';
 
 import * as S from './styles';
 import TypeBadge from '../../components/TypeBadge';
+import StatusBar from '../../components/StatusBar';
 
 const PokemonDetails: React.FC = () => {
     const navigation = useNavigation();
@@ -76,6 +77,15 @@ const PokemonDetails: React.FC = () => {
                             <S.DetailsText>Monster Dragon</S.DetailsText>
                         </S.DetailsSecondaryContent>
                     </S.DetailsSecondaryContainer>
+
+                    <S.DetailsMainContainer>
+                        <StatusBar name="hp" baseStat={64} />
+                        <StatusBar name="attack" baseStat={10} />
+                        <StatusBar name="special-attack" baseStat={125} />
+                        <StatusBar name="defense" baseStat={180} />
+                        <StatusBar name="special-defense" baseStat={220} />
+                        <StatusBar name="speed" baseStat={72} />
+                    </S.DetailsMainContainer>
                 </S.SectionDetails>
             </S.MainContent>
         </S.Container>
