@@ -12,6 +12,7 @@ export const Container = styled.View<TypeBadgeProps>`
         ${props => darken(0.2, props.theme.typeBackground[props.type])};
 
     border-radius: 10px;
+    elevation: 5;
 `;
 
 export const BadgeName = styled.Text`
@@ -19,5 +20,5 @@ export const BadgeName = styled.Text`
 
     font-size: 16px;
     text-transform: uppercase;
-    font-family: 'ChakraPetch-Regular';
+    font-family: 'ChakraPetch-SemiBold';
 `;
