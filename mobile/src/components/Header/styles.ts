@@ -11,7 +11,6 @@ export const Container = styled.View`
     width: 100%;
 
     padding: 10px 20px;
-    margin-bottom: 20px;
 
     background: ${props => props.theme.background.vermillion};
 `;

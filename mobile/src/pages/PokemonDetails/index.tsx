@@ -31,8 +31,8 @@ const PokemonDetails: React.FC = () => {
                 <S.PokemonImage source={charizardImage} />
 
                 <S.BadgeContainer>
+                    <TypeBadge type="fire" />
                     <TypeBadge type="dragon" />
-                    <TypeBadge type="flying" />
                 </S.BadgeContainer>
             </S.HeaderContainer>
 
@@ -40,17 +40,25 @@ const PokemonDetails: React.FC = () => {
                 <S.SectionDetails>
                     <S.DetailsMainContainer>
                         <S.DetailsTitle>About</S.DetailsTitle>
-                        <S.DetailsText>Lorem Ipsum Sit Amet</S.DetailsText>
+
+                        <S.DetailsText>
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Repellendus, id! Id animi, rerum nihil iure
+                            soluta accusamus saepe sequi nobis suscipit commodi
+                            fugiat tempore ut dolore illum vitae impedit quasi.
+                        </S.DetailsText>
                     </S.DetailsMainContainer>
 
                     <S.DetailsSecondaryContainer>
                         <S.DetailsSecondaryContent>
                             <S.DetailsTitle>Height</S.DetailsTitle>
+
                             <S.DetailsText>1.7m</S.DetailsText>
                         </S.DetailsSecondaryContent>
 
                         <S.DetailsSecondaryContent>
                             <S.DetailsTitle>Weight</S.DetailsTitle>
+
                             <S.DetailsText>90.5KG</S.DetailsText>
                         </S.DetailsSecondaryContent>
                     </S.DetailsSecondaryContainer>
@@ -58,11 +66,13 @@ const PokemonDetails: React.FC = () => {
                     <S.DetailsSecondaryContainer>
                         <S.DetailsSecondaryContent>
                             <S.DetailsTitle>Habitat</S.DetailsTitle>
+
                             <S.DetailsText>Mountain</S.DetailsText>
                         </S.DetailsSecondaryContent>
 
                         <S.DetailsSecondaryContent>
                             <S.DetailsTitle>Egg Group</S.DetailsTitle>
+
                             <S.DetailsText>Monster Dragon</S.DetailsText>
                         </S.DetailsSecondaryContent>
                     </S.DetailsSecondaryContainer>

@@ -2,11 +2,13 @@ import styled from 'styled-components/native';
 
 import Icon from 'react-native-vector-icons/Feather';
 
-export const Container = styled.View`
+export const Container = styled.ScrollView`
     flex: 1;
 
     width: 100%;
     height: 100%;
+
+    padding-top: 20px;
 `;
 
 export const ReturnButton = styled.TouchableOpacity`
