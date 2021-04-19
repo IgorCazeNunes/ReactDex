@@ -58,16 +58,51 @@ export const BadgeContainer = styled.View`
     flex-direction: row;
 `;
 
-export const MainContent = styled.View``;
+export const MainContent = styled.View`
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 
-export const SectionDetails = styled.View``;
+    margin-top: 20px;
 
-export const DetailsTitle = styled.Text``;
+    background: ${props => props.theme.background.white};
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+`;
 
-export const DetailsText = styled.Text``;
+export const SectionDetails = styled.View`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
-export const DetailsMainContainer = styled.View``;
+    padding: 20px;
+`;
 
-export const DetailsSecondaryContainer = styled.View``;
+export const DetailsTitle = styled.Text`
+    color: ${props => props.theme.font.dark};
+    font-size: 18px;
+    font-family: 'ChakraPetch-SemiBold';
+`;
 
-export const DetailsSecondaryContent = styled.View``;
+export const DetailsText = styled.Text`
+    color: ${props => props.theme.font.dark};
+    font-size: 16px;
+    text-align: justify;
+    font-family: 'ChakraPetch-Regular';
+`;
+
+export const DetailsMainContainer = styled.View`
+    display: flex;
+`;
+
+export const DetailsSecondaryContainer = styled.View`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    margin-top: 20px;
+`;
+
+export const DetailsSecondaryContent = styled.View`
+    width: 47.5%;
+`;
