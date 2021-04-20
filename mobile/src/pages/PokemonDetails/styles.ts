@@ -70,7 +70,7 @@ export const MainContent = styled.View`
     border-top-right-radius: 20px;
 `;
 
-export const SectionDetails = styled.View`
+export const DetailsSection = styled.View`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -80,8 +80,15 @@ export const SectionDetails = styled.View`
 
 export const DetailsTitle = styled.Text`
     color: ${props => props.theme.font.dark};
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'ChakraPetch-SemiBold';
+`;
+
+export const DetailsSubTitle = styled.Text`
+    color: ${props => props.theme.font.dark};
+    font-size: 18px;
+    text-transform: capitalize;
+    font-family: 'ChakraPetch-Medium';
 `;
 
 export const DetailsText = styled.Text`
@@ -113,6 +120,7 @@ export const StatusSection = styled.View`
     justify-content: space-between;
 
     padding: 20px;
+    padding-top: 0;
 
     margin-bottom: 20px;
 `;
@@ -139,5 +147,5 @@ export const StatusSubTitle = styled.Text`
     color: ${props => props.theme.font.dark};
     font-size: 18px;
     text-transform: capitalize;
-    font-family: 'ChakraPetch-SemiBold';
+    font-family: 'ChakraPetch-Medium';
 `;

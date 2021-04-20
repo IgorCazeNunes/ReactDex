@@ -79,7 +79,7 @@ const PokemonDetails: React.FC = () => {
             </S.HeaderContainer>
 
             <S.MainContent>
-                <S.SectionDetails>
+                <S.DetailsSection>
                     <S.DetailsMainContainer>
                         <S.DetailsTitle>About</S.DetailsTitle>
 
@@ -93,13 +93,13 @@ const PokemonDetails: React.FC = () => {
 
                     <S.DetailsSecondaryContainer>
                         <S.DetailsSecondaryContent>
-                            <S.DetailsTitle>Height</S.DetailsTitle>
+                            <S.DetailsSubTitle>Height</S.DetailsSubTitle>
 
                             <S.DetailsText>1.7m</S.DetailsText>
                         </S.DetailsSecondaryContent>
 
                         <S.DetailsSecondaryContent>
-                            <S.DetailsTitle>Weight</S.DetailsTitle>
+                            <S.DetailsSubTitle>Weight</S.DetailsSubTitle>
 
                             <S.DetailsText>90.5KG</S.DetailsText>
                         </S.DetailsSecondaryContent>
@@ -107,18 +107,18 @@ const PokemonDetails: React.FC = () => {
 
                     <S.DetailsSecondaryContainer>
                         <S.DetailsSecondaryContent>
-                            <S.DetailsTitle>Habitat</S.DetailsTitle>
+                            <S.DetailsSubTitle>Habitat</S.DetailsSubTitle>
 
                             <S.DetailsText>Mountain</S.DetailsText>
                         </S.DetailsSecondaryContent>
 
                         <S.DetailsSecondaryContent>
-                            <S.DetailsTitle>Egg Group</S.DetailsTitle>
+                            <S.DetailsSubTitle>Egg Group</S.DetailsSubTitle>
 
                             <S.DetailsText>Monster Dragon</S.DetailsText>
                         </S.DetailsSecondaryContent>
                     </S.DetailsSecondaryContainer>
-                </S.SectionDetails>
+                </S.DetailsSection>
 
                 <S.StatusSection>
                     <S.StatusTitle>Status</S.StatusTitle>
