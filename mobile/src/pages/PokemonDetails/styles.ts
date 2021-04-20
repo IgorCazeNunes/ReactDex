@@ -20,8 +20,8 @@ export const ReturnButton = styled.TouchableOpacity`
     position: absolute;
     z-index: 999;
 
-    top: 15px;
-    left: 15px;
+    top: 0px;
+    left: 20px;
 
     height: 50px;
     width: auto;
@@ -105,4 +105,39 @@ export const DetailsSecondaryContainer = styled.View`
 
 export const DetailsSecondaryContent = styled.View`
     width: 47.5%;
+`;
+
+export const StatusSection = styled.View`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+`;
+
+export const StatusTitle = styled.Text`
+    color: ${props => props.theme.font.dark};
+    font-size: 20px;
+    font-family: 'ChakraPetch-SemiBold';
+`;
+
+export const StatusList = styled.View`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+`;
+
+export const StatusContainer = styled.View`
+    margin-bottom: 10px;
+    width: 45%;
+    margin-right: 5%;
+`;
+
+export const StatusSubTitle = styled.Text`
+    color: ${props => props.theme.font.dark};
+    font-size: 18px;
+    text-transform: capitalize;
+    font-family: 'ChakraPetch-SemiBold';
 `;

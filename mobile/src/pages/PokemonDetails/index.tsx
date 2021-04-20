@@ -1,16 +1,57 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
-import { Text } from 'react-native';
+import TypeBadge from '../../components/TypeBadge';
+import StatusBar from '../../components/StatusBar';
 
 import charizardImage from '../../assets/charizard.png';
 
 import * as S from './styles';
-import TypeBadge from '../../components/TypeBadge';
-import StatusBar from '../../components/StatusBar';
+
+interface IFakeStatus {
+    name:
+        | 'hp'
+        | 'attack'
+        | 'defense'
+        | 'special-attack'
+        | 'special-defense'
+        | 'speed';
+    value: number;
+}
 
 const PokemonDetails: React.FC = () => {
     const navigation = useNavigation();
+
+    const [fakeStatusList, setFakeStatusList] = useState<IFakeStatus[]>([]);
+
+    useEffect(() => {
+        setFakeStatusList([
+            {
+                name: 'hp',
+                value: 255,
+            },
+            {
+                name: 'speed',
+                value: 10,
+            },
+            {
+                name: 'attack',
+                value: 50,
+            },
+            {
+                name: 'special-attack',
+                value: 80,
+            },
+            {
+                name: 'defense',
+                value: 125,
+            },
+            {
+                name: 'special-defense',
+                value: 212,
+            },
+        ]);
+    }, []);
 
     const handleNavigateBack = useCallback(() => {
         navigation.goBack();
@@ -77,16 +118,27 @@ const PokemonDetails: React.FC = () => {
                             <S.DetailsText>Monster Dragon</S.DetailsText>
                         </S.DetailsSecondaryContent>
                     </S.DetailsSecondaryContainer>
-
-                    <S.DetailsMainContainer>
-                        <StatusBar name="hp" baseStat={64} />
-                        <StatusBar name="attack" baseStat={10} />
-                        <StatusBar name="special-attack" baseStat={125} />
-                        <StatusBar name="defense" baseStat={180} />
-                        <StatusBar name="special-defense" baseStat={220} />
-                        <StatusBar name="speed" baseStat={72} />
-                    </S.DetailsMainContainer>
                 </S.SectionDetails>
+
+                <S.StatusSection>
+                    <S.StatusTitle>Status</S.StatusTitle>
+
+                    <S.StatusList>
+                        {fakeStatusList &&
+                            fakeStatusList.map(status => (
+                                <S.StatusContainer key={status.name}>
+                                    <S.StatusSubTitle>
+                                        {status.name}
+                                    </S.StatusSubTitle>
+
+                                    <StatusBar
+                                        name={status.name}
+                                        baseStat={status.value}
+                                    />
+                                </S.StatusContainer>
+                            ))}
+                    </S.StatusList>
+                </S.StatusSection>
             </S.MainContent>
         </S.Container>
     );
