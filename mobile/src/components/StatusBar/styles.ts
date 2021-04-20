@@ -26,6 +26,8 @@ export const Container = styled.View<StatusData>`
 
     background: ${props =>
         lighten(0.2, props.theme.statusBackground[props.statusName])};
+
+    elevation: 3;
 `;
 
 export const ProgressionBar = styled.View<StatusData>`
