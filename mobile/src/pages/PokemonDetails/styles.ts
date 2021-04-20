@@ -64,6 +64,7 @@ export const MainContent = styled.View`
     flex-direction: column;
 
     margin-top: 20px;
+    padding: 20px;
 
     background: ${props => props.theme.background.white};
     border-top-left-radius: 20px;
@@ -95,8 +96,6 @@ export const DetailsSection = styled.View`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    padding: 20px;
 `;
 
 export const DetailsMainContainer = styled.View`
@@ -107,12 +106,12 @@ export const DetailsSecondaryContainer = styled.View`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-    margin-top: 20px;
+    margin-top: 10px;
 `;
 
 export const DetailsSecondaryContent = styled.View`
-    width: 47.5%;
+    width: 45%;
+    margin-right: 5%;
 `;
 
 export const StatusSection = styled.View`
@@ -120,10 +119,7 @@ export const StatusSection = styled.View`
     flex-direction: column;
     justify-content: space-between;
 
-    padding: 20px;
-    padding-top: 0;
-
-    margin-bottom: 20px;
+    margin: 20px 0;
 `;
 
 export const StatusList = styled.View`
