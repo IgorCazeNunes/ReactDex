@@ -81,55 +81,65 @@ const PokemonDetails: React.FC = () => {
             <S.MainContent>
                 <S.DetailsSection>
                     <S.DetailsMainContainer>
-                        <S.DetailsTitle>About</S.DetailsTitle>
+                        <S.MainContentTitle>About</S.MainContentTitle>
 
-                        <S.DetailsText>
+                        <S.MainContentText>
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Repellendus, id! Id animi, rerum nihil iure
                             soluta accusamus saepe sequi nobis suscipit commodi
                             fugiat tempore ut dolore illum vitae impedit quasi.
-                        </S.DetailsText>
+                        </S.MainContentText>
                     </S.DetailsMainContainer>
 
                     <S.DetailsSecondaryContainer>
                         <S.DetailsSecondaryContent>
-                            <S.DetailsSubTitle>Height</S.DetailsSubTitle>
+                            <S.MainContentSubTitle>
+                                Height
+                            </S.MainContentSubTitle>
 
-                            <S.DetailsText>1.7m</S.DetailsText>
+                            <S.MainContentText>1.7m</S.MainContentText>
                         </S.DetailsSecondaryContent>
 
                         <S.DetailsSecondaryContent>
-                            <S.DetailsSubTitle>Weight</S.DetailsSubTitle>
+                            <S.MainContentSubTitle>
+                                Weight
+                            </S.MainContentSubTitle>
 
-                            <S.DetailsText>90.5KG</S.DetailsText>
+                            <S.MainContentText>90.5KG</S.MainContentText>
                         </S.DetailsSecondaryContent>
                     </S.DetailsSecondaryContainer>
 
                     <S.DetailsSecondaryContainer>
                         <S.DetailsSecondaryContent>
-                            <S.DetailsSubTitle>Habitat</S.DetailsSubTitle>
+                            <S.MainContentSubTitle>
+                                Habitat
+                            </S.MainContentSubTitle>
 
-                            <S.DetailsText>Mountain</S.DetailsText>
+                            <S.MainContentText>Mountain</S.MainContentText>
                         </S.DetailsSecondaryContent>
 
                         <S.DetailsSecondaryContent>
-                            <S.DetailsSubTitle>Egg Group</S.DetailsSubTitle>
+                            <S.MainContentSubTitle>
+                                Egg Group
+                            </S.MainContentSubTitle>
 
-                            <S.DetailsText>Monster Dragon</S.DetailsText>
+                            <S.MainContentText>
+                                Monster Dragon
+                            </S.MainContentText>
                         </S.DetailsSecondaryContent>
                     </S.DetailsSecondaryContainer>
                 </S.DetailsSection>
 
                 <S.StatusSection>
-                    <S.StatusTitle>Status</S.StatusTitle>
+                    <S.MainContentTitle>Status</S.MainContentTitle>
 
                     <S.StatusList>
                         {fakeStatusList &&
                             fakeStatusList.map(status => (
                                 <S.StatusContainer key={status.name}>
-                                    <S.StatusSubTitle>
+                                    <S.MainContentSubTitle>
                                         {status.name}
-                                    </S.StatusSubTitle>
+                                    </S.MainContentSubTitle>
 
                                     <StatusBar
                                         name={status.name}

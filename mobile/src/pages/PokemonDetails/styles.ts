@@ -70,32 +70,33 @@ export const MainContent = styled.View`
     border-top-right-radius: 20px;
 `;
 
+export const MainContentTitle = styled.Text`
+    color: ${props => props.theme.font.dark};
+    font-size: 20px;
+    font-family: 'ChakraPetch-SemiBold';
+    text-transform: capitalize;
+`;
+
+export const MainContentSubTitle = styled.Text`
+    color: ${props => props.theme.font.dark};
+    font-size: 18px;
+    font-family: 'ChakraPetch-Medium';
+    text-transform: capitalize;
+`;
+
+export const MainContentText = styled.Text`
+    color: ${props => props.theme.font.dark};
+    font-size: 16px;
+    font-family: 'ChakraPetch-Regular';
+    text-align: justify;
+`;
+
 export const DetailsSection = styled.View`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     padding: 20px;
-`;
-
-export const DetailsTitle = styled.Text`
-    color: ${props => props.theme.font.dark};
-    font-size: 20px;
-    font-family: 'ChakraPetch-SemiBold';
-`;
-
-export const DetailsSubTitle = styled.Text`
-    color: ${props => props.theme.font.dark};
-    font-size: 18px;
-    text-transform: capitalize;
-    font-family: 'ChakraPetch-Medium';
-`;
-
-export const DetailsText = styled.Text`
-    color: ${props => props.theme.font.dark};
-    font-size: 16px;
-    text-align: justify;
-    font-family: 'ChakraPetch-Regular';
 `;
 
 export const DetailsMainContainer = styled.View`
@@ -125,12 +126,6 @@ export const StatusSection = styled.View`
     margin-bottom: 20px;
 `;
 
-export const StatusTitle = styled.Text`
-    color: ${props => props.theme.font.dark};
-    font-size: 20px;
-    font-family: 'ChakraPetch-SemiBold';
-`;
-
 export const StatusList = styled.View`
     display: flex;
     flex-direction: row;
@@ -141,11 +136,4 @@ export const StatusContainer = styled.View`
     margin-bottom: 10px;
     width: 45%;
     margin-right: 5%;
-`;
-
-export const StatusSubTitle = styled.Text`
-    color: ${props => props.theme.font.dark};
-    font-size: 18px;
-    text-transform: capitalize;
-    font-family: 'ChakraPetch-Medium';
 `;
