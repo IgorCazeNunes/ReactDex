@@ -4,8 +4,11 @@ import { darken } from 'polished';
 import { TypeBadgeProps } from './index';
 
 export const Container = styled.View<TypeBadgeProps>`
-    padding: 0 10px;
-    margin: 0 5px;
+    display: flex;
+    align-items: center;
+
+    padding: 0 5px;
+    margin: 2.5px 5px;
 
     background: ${props => props.theme.typeBackground[props.type]};
     border: 1px solid
