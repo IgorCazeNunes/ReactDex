@@ -45,6 +45,10 @@ export const HeaderContainer = styled.View`
     align-items: center;
 `;
 
+export const Loader = styled.ActivityIndicator`
+    margin: 15px 0;
+`;
+
 export const PokemonImage = styled.Image`
     margin: 20px;
     margin-bottom: 0;
@@ -93,11 +97,19 @@ export const SectionSubTitle = styled.Text`
     text-transform: capitalize;
 `;
 
+export const MainContentAbout = styled.Text`
+    color: ${props => props.theme.font.dark};
+    font-size: 16px;
+    font-family: 'ChakraPetch-Regular';
+    text-align: justify;
+`;
+
 export const MainContentText = styled.Text`
     color: ${props => props.theme.font.dark};
     font-size: 16px;
     font-family: 'ChakraPetch-Regular';
     text-align: justify;
+    text-transform: capitalize;
 `;
 
 export const DetailsSection = styled.View`
