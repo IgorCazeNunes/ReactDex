@@ -71,14 +71,22 @@ export const MainContent = styled.View`
     border-top-right-radius: 20px;
 `;
 
-export const MainContentTitle = styled.Text`
+export const ContentTitle = styled.Text`
+    color: ${props => props.theme.font.dark};
+    font-size: 22px;
+    font-family: 'ChakraPetch-SemiBold';
+    text-transform: capitalize;
+    text-align: center;
+`;
+
+export const SectionTitle = styled.Text`
     color: ${props => props.theme.font.dark};
     font-size: 20px;
     font-family: 'ChakraPetch-SemiBold';
     text-transform: capitalize;
 `;
 
-export const MainContentSubTitle = styled.Text`
+export const SectionSubTitle = styled.Text`
     color: ${props => props.theme.font.dark};
     font-size: 18px;
     font-family: 'ChakraPetch-Medium';

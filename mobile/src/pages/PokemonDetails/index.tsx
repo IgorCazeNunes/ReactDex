@@ -1,5 +1,7 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
+
+import formatNumber from '../../utils/formatIdToString';
 
 import TypeBadge from '../../components/TypeBadge';
 import StatusBar from '../../components/StatusBar';
@@ -53,6 +55,10 @@ const PokemonDetails: React.FC = () => {
         ]);
     }, []);
 
+    const formatedNumber = useMemo(() => {
+        return formatNumber(3);
+    }, []);
+
     const handleNavigateBack = useCallback(() => {
         navigation.goBack();
     }, [navigation]);
@@ -79,9 +85,11 @@ const PokemonDetails: React.FC = () => {
             </S.HeaderContainer>
 
             <S.MainContent>
+                <S.ContentTitle>{`${formatedNumber} - Charizard`}</S.ContentTitle>
+
                 <S.DetailsSection>
                     <S.DetailsMainContainer>
-                        <S.MainContentTitle>About</S.MainContentTitle>
+                        <S.SectionTitle>About</S.SectionTitle>
 
                         <S.MainContentText>
                             Lorem ipsum dolor sit amet consectetur adipisicing
@@ -93,17 +101,13 @@ const PokemonDetails: React.FC = () => {
 
                     <S.DetailsSecondaryContainer>
                         <S.DetailsSecondaryContent>
-                            <S.MainContentSubTitle>
-                                Height
-                            </S.MainContentSubTitle>
+                            <S.SectionSubTitle>Height</S.SectionSubTitle>
 
                             <S.MainContentText>1.7m</S.MainContentText>
                         </S.DetailsSecondaryContent>
 
                         <S.DetailsSecondaryContent>
-                            <S.MainContentSubTitle>
-                                Weight
-                            </S.MainContentSubTitle>
+                            <S.SectionSubTitle>Weight</S.SectionSubTitle>
 
                             <S.MainContentText>90.5KG</S.MainContentText>
                         </S.DetailsSecondaryContent>
@@ -111,17 +115,13 @@ const PokemonDetails: React.FC = () => {
 
                     <S.DetailsSecondaryContainer>
                         <S.DetailsSecondaryContent>
-                            <S.MainContentSubTitle>
-                                Habitat
-                            </S.MainContentSubTitle>
+                            <S.SectionSubTitle>Habitat</S.SectionSubTitle>
 
                             <S.MainContentText>Mountain</S.MainContentText>
                         </S.DetailsSecondaryContent>
 
                         <S.DetailsSecondaryContent>
-                            <S.MainContentSubTitle>
-                                Egg Group
-                            </S.MainContentSubTitle>
+                            <S.SectionSubTitle>Egg Group</S.SectionSubTitle>
 
                             <S.MainContentText>
                                 Monster Dragon
@@ -131,15 +131,15 @@ const PokemonDetails: React.FC = () => {
                 </S.DetailsSection>
 
                 <S.StatusSection>
-                    <S.MainContentTitle>Status</S.MainContentTitle>
+                    <S.SectionTitle>Status</S.SectionTitle>
 
                     <S.StatusList>
                         {fakeStatusList &&
                             fakeStatusList.map(status => (
                                 <S.StatusContainer key={status.name}>
-                                    <S.MainContentSubTitle>
+                                    <S.SectionSubTitle>
                                         {status.name}
-                                    </S.MainContentSubTitle>
+                                    </S.SectionSubTitle>
 
                                     <StatusBar
                                         name={status.name}
