@@ -2,7 +2,7 @@ import styled from 'styled-components/native';
 
 import { darken } from 'polished';
 
-import LogoPokeball from '../../assets/Pokeball.png';
+import LinearGradient from 'react-native-linear-gradient';
 
 export interface PokemonItemProps {
     type:
@@ -26,14 +26,13 @@ export interface PokemonItemProps {
         | 'fairy';
 }
 
-export const Container = styled.TouchableOpacity<PokemonItemProps>`
+export const Container = styled.TouchableHighlight<PokemonItemProps>`
     display: flex;
     flex-direction: column;
 
     width: 100%;
     height: 200px;
 
-    padding: 10px;
     margin: 20px;
 
     background-color: ${props => props.theme.typeBackground[props.type]};
@@ -41,6 +40,12 @@ export const Container = styled.TouchableOpacity<PokemonItemProps>`
     border-radius: 10px;
 
     elevation: 5;
+`;
+
+export const ContainerBackground = styled(LinearGradient)`
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
 `;
 
 export const CardTitle = styled.View`

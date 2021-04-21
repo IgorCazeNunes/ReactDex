@@ -1,6 +1,10 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { useNavigation } from '@react-navigation/native';
 
+import LinearGradient from 'react-native-linear-gradient';
+import { StyleSheet } from 'react-native';
+import { useTheme } from 'styled-components';
+import { darken } from 'polished';
 import TypeBadge from '../TypeBadge';
 
 import charizardImage from '../../assets/charizard.png';
@@ -51,10 +55,19 @@ export interface TypeData {
 
 const PokemonCard: React.FC<PokemonData> = ({ pokemon }: PokemonData) => {
     const navigation = useNavigation();
+    const theme = useTheme();
 
     const handleNavigateToDetails = useCallback(() => {
         navigation.navigate('PokemonDetails');
     }, [navigation]);
+
+    const primaryColorHex = useMemo(() => {
+        return theme.typeBackground[pokemon.types[0].type.name];
+    }, [pokemon.types, theme.typeBackground]);
+
+    const secondaryColorHex = useMemo(() => {
+        return darken(0.1, theme.typeBackground[pokemon.types[0].type.name]);
+    }, [pokemon.types, theme.typeBackground]);
 
     return (
         <S.Container
@@ -64,33 +77,42 @@ const PokemonCard: React.FC<PokemonData> = ({ pokemon }: PokemonData) => {
                 handleNavigateToDetails();
             }}
         >
-            <S.CardTitle>
-                <S.PokemonNumber>{`00${pokemon.id} - `}</S.PokemonNumber>
-                <S.PokemonName>{pokemon.name}</S.PokemonName>
-            </S.CardTitle>
+            <S.ContainerBackground
+                start={{ x: 0.25, y: 0.5 }}
+                end={{ x: 0.5, y: 0.85 }}
+                locations={[1, 0.5]}
+                colors={[primaryColorHex, secondaryColorHex]}
+            >
+                <S.CardTitle>
+                    <S.PokemonNumber>{`00${pokemon.id} - `}</S.PokemonNumber>
+                    <S.PokemonName>{pokemon.name}</S.PokemonName>
+                </S.CardTitle>
 
-            <S.CardContent>
-                <S.TypeList>
-                    {pokemon.types.map(typeData => (
-                        <S.TypeContainer key={pokemon.id + typeData.type.name}>
-                            <TypeBadge type={typeData.type.name} />
-                        </S.TypeContainer>
-                    ))}
-                </S.TypeList>
+                <S.CardContent>
+                    <S.TypeList>
+                        {pokemon.types.map(typeData => (
+                            <S.TypeContainer
+                                key={pokemon.id + typeData.type.name}
+                            >
+                                <TypeBadge type={typeData.type.name} />
+                            </S.TypeContainer>
+                        ))}
+                    </S.TypeList>
 
-                <S.PokemonImageContainer>
-                    <S.PokemonImage
-                        // source={{
-                        //     uri:
-                        //         pokemon.sprites.other['official-artwork']
-                        //             .front_default,
-                        // }}
+                    <S.PokemonImageContainer>
+                        <S.PokemonImage
+                            // source={{
+                            //     uri:
+                            //         pokemon.sprites.other['official-artwork']
+                            //             .front_default,
+                            // }}
 
-                        source={charizardImage}
-                        resizeMode="cover"
-                    />
-                </S.PokemonImageContainer>
-            </S.CardContent>
+                            source={charizardImage}
+                            resizeMode="cover"
+                        />
+                    </S.PokemonImageContainer>
+                </S.CardContent>
+            </S.ContainerBackground>
         </S.Container>
     );
 };
