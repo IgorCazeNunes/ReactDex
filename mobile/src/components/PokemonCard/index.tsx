@@ -105,13 +105,11 @@ const PokemonCard: React.FC<PokemonData> = ({ pokemon }: PokemonData) => {
 
                     <S.PokemonImageContainer>
                         <S.PokemonImage
-                            // source={{
-                            //     uri:
-                            //         pokemon.sprites.other['official-artwork']
-                            //             .front_default,
-                            // }}
-
-                            source={charizardImage}
+                            source={{
+                                uri:
+                                    pokemon.sprites.other['official-artwork']
+                                        .front_default,
+                            }}
                             resizeMode="cover"
                         />
                     </S.PokemonImageContainer>

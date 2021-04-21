@@ -1,13 +1,18 @@
-import React, { useCallback } from 'react';
-import { useNavigation } from '@react-navigation/native';
+import React, { useCallback, useEffect, useState } from 'react';
+import { View } from 'react-native';
 
-import { Text, View } from 'react-native';
-import { FlatList, TouchableOpacity } from 'react-native-gesture-handler';
+import api from '../../services/api';
 
-import * as S from './styles';
 import PokemonCard from '../../components/PokemonCard';
 
-export interface IPokemonProps {
+import * as S from './styles';
+
+interface IPokemonListData {
+    name: string;
+    url: string;
+}
+
+export interface IPokemonData {
     id: number;
     name: string;
     sprites: {
@@ -46,13 +51,40 @@ export interface ITypeData {
 }
 
 const Dashboard: React.FC = () => {
-    const navigation = useNavigation();
+    const [nextOffset, setNextOffset] = useState('');
+    const [pokemonList, setPokemonList] = useState<IPokemonData[]>([]);
+    const [isLoading, setIsLoading] = useState(false);
 
-    const handleNavigateToDetails = useCallback(() => {
-        navigation.navigate('PokemonDetails');
-    }, [navigation]);
+    const getPokemonList = useCallback(async () => {
+        setIsLoading(true);
 
-    const fakePokemonData: IPokemonProps = {
+        const { data } = await api.get(`pokemon?${nextOffset}`);
+
+        const dataResults: IPokemonListData[] = data.results;
+
+        const pokemonsPromise = await dataResults.map(async pokemon => {
+            const response = await api.get<IPokemonData>(
+                `pokemon/${pokemon.name}`,
+            );
+            return response.data;
+        });
+
+        const pokemons = await Promise.all(pokemonsPromise);
+
+        setPokemonList([...pokemonList, ...pokemons]);
+
+        const splittedNextLink = data.next.split('?');
+        setNextOffset(splittedNextLink[1]);
+
+        setIsLoading(false);
+    }, [nextOffset, pokemonList]);
+
+    useEffect(() => {
+        getPokemonList();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    const fakePokemonData: IPokemonData = {
         id: 0,
         name: 'charizard',
         sprites: {
@@ -84,7 +116,7 @@ const Dashboard: React.FC = () => {
         ],
     };
 
-    const fakePokemonList: IPokemonProps[] = [
+    const fakePokemonList: IPokemonData[] = [
         {
             ...fakePokemonData,
             id: 1,
@@ -140,17 +172,22 @@ const Dashboard: React.FC = () => {
     return (
         <S.Container>
             <S.PokemonList
-                data={fakePokemonList}
+                data={pokemonList}
                 keyExtractor={item => item.id}
                 ListHeaderComponent={<View />}
                 ListHeaderComponentStyle={{
                     height: 20,
                 }}
-                ListFooterComponent={<View />}
+                onEndReached={getPokemonList}
+                ListFooterComponent={
+                    <>
+                        {isLoading && <S.Loader size="large" color="#3d3d4d" />}
+                    </>
+                }
                 ListFooterComponentStyle={{
-                    height: 40,
+                    height: 60,
                 }}
-                renderItem={({ item }: { item: IPokemonProps }) => {
+                renderItem={({ item }: { item: IPokemonData }) => {
                     return <PokemonCard pokemon={item} />;
                 }}
             />

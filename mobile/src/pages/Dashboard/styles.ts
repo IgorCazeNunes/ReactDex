@@ -12,3 +12,7 @@ export const PokemonList = styled(FlatList).attrs({
 })`
     flex: 1;
 `;
+
+export const Loader = styled.ActivityIndicator`
+    margin: 15px 0;
+`;
