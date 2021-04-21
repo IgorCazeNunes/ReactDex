@@ -33,7 +33,7 @@ export const Container = styled.TouchableHighlight<PokemonItemProps>`
     width: 100%;
     height: 200px;
 
-    margin: 20px;
+    margin: 10px 0;
 
     background-color: ${props => props.theme.typeBackground[props.type]};
 
@@ -77,8 +77,6 @@ export const CardContent = styled.View`
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-
-    width: 100%;
 `;
 
 export const TypeList = styled.View`
