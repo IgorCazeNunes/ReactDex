@@ -57,9 +57,12 @@ const PokemonCard: React.FC<PokemonData> = ({ pokemon }: PokemonData) => {
     const navigation = useNavigation();
     const theme = useTheme();
 
-    const handleNavigateToDetails = useCallback(() => {
-        navigation.navigate('PokemonDetails');
-    }, [navigation]);
+    const handleNavigateToDetails = useCallback(
+        (id: number) => {
+            navigation.navigate('PokemonDetails', { id });
+        },
+        [navigation],
+    );
 
     const formatedNumber = useMemo(() => {
         return formatNumber(pokemon.id);
@@ -78,7 +81,7 @@ const PokemonCard: React.FC<PokemonData> = ({ pokemon }: PokemonData) => {
             key={pokemon.id}
             type={pokemon.types[0].type.name}
             onPress={() => {
-                handleNavigateToDetails();
+                handleNavigateToDetails(pokemon.id);
             }}
         >
             <S.ContainerBackground
