@@ -1,13 +1,13 @@
 import React, { useCallback, useMemo } from 'react';
 import { useNavigation } from '@react-navigation/native';
-
-import LinearGradient from 'react-native-linear-gradient';
-import { StyleSheet } from 'react-native';
 import { useTheme } from 'styled-components';
 import { darken } from 'polished';
-import TypeBadge from '../TypeBadge';
+
+import formatNumber from '../../utils/formatIdToString';
 
 import charizardImage from '../../assets/charizard.png';
+
+import TypeBadge from '../TypeBadge';
 
 import * as S from './styles';
 
@@ -61,6 +61,10 @@ const PokemonCard: React.FC<PokemonData> = ({ pokemon }: PokemonData) => {
         navigation.navigate('PokemonDetails');
     }, [navigation]);
 
+    const formatedNumber = useMemo(() => {
+        return formatNumber(pokemon.id);
+    }, [pokemon.id]);
+
     const primaryColorHex = useMemo(() => {
         return theme.typeBackground[pokemon.types[0].type.name];
     }, [pokemon.types, theme.typeBackground]);
@@ -84,7 +88,7 @@ const PokemonCard: React.FC<PokemonData> = ({ pokemon }: PokemonData) => {
                 colors={[primaryColorHex, secondaryColorHex]}
             >
                 <S.CardTitle>
-                    <S.PokemonNumber>{`00${pokemon.id} - `}</S.PokemonNumber>
+                    <S.PokemonNumber>{`${formatedNumber} - `}</S.PokemonNumber>
                     <S.PokemonName>{pokemon.name}</S.PokemonName>
                 </S.CardTitle>
 
