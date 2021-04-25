@@ -92,7 +92,7 @@ export const PokemonImageContainer = styled.View`
     align-items: flex-end;
     justify-content: flex-end;
 
-    width: 50%;
+    width: 40%;
     height: 140px;
 `;
 

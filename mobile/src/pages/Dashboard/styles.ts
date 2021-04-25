@@ -10,7 +10,11 @@ export const Container = styled.View`
 export const PokemonList = styled(FlatList).attrs({
     numColumns: 1,
 })`
+    display: flex;
     flex: 1;
+    width: 100%;
+
+    padding: 0 20px;
 `;
 
 export const Loader = styled.ActivityIndicator`
