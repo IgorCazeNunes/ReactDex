@@ -8,7 +8,7 @@
 - 📱 [Web Mobile Preview](#-web-mobile-preview)
 - 👨‍💻️ [Tecnogias utilizadas](#%EF%B8%8F-tecnogias-utilizadas)
 - 📋️ [IDE e Facilidades](#%EF%B8%8F-ide-e-facilidades)
-- 📦️ [Como utilizar o projeto](#%EF%B8%8F-como-baixar-o-projeto)
+- 📦️ [Como utilizar o projeto](#%EF%B8%8F-como-utilizar-o-projeto)
 
 ---
 
