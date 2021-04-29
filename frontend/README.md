@@ -8,6 +8,7 @@
 - 📱 [Web Mobile Preview](#-web-mobile-preview)
 - 👨‍💻️ [Tecnogias utilizadas](#%EF%B8%8F-tecnogias-utilizadas)
 - 📋️ [IDE e Facilidades](#%EF%B8%8F-ide-e-facilidades)
+- 📦️ [Como utilizar o projeto](#%EF%B8%8F-como-baixar-o-projeto)
 
 ---
 
@@ -45,6 +46,29 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [Editor Config](https://editorconfig.org/)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
+
+
+---
+
+## 📦️ Como utilizar o projeto
+
+```bash
+  # Clone o repositório
+  ❯ git clone https://github.com/IgorCazeNunes/ReactDex.git
+
+  # Entre no diretório
+  ❯ cd gomarketplace
+
+  # Instale as dependências
+  ❯ yarn
+  # ou pode usar o `npm`
+  ❯ npm install
+  
+  # Inicialize o projeto
+  ❯ yarn start
+  # ou pode usar o `npm`
+  ❯ npm start
+```
 
 ---
 
