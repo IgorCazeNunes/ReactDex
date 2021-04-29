@@ -2,15 +2,15 @@
   ReactDex Web
 </h1>
 
-<h1 align="center">Índice</h1>
+<h1>Índice</h1>
 
-<p align="center">
-   <a href="#-web-desktop-preview">🖥 Desktop Preview</a> •
-   <a href="#-web-mobile-preview">📱 Mobile Preview</a> • 
-   <a href="#%EF%B8%8F-tecnogias-utilizadas">👨‍💻️ Tecnogias utilizadas</a> • 
-   <a href="#%EF%B8%8F-como-baixar-o-projeto">📦️ Como baixar o projeto</a> • 
-   <a href="#%EF%B8%8F-como-contribuir">🤔️ Como contribuir</a> • 
-</p>
+- 🖥 [Web Desktop Preview](#-web-desktop-preview)
+- 📱 [Web Mobile Preview](#-web-mobile-preview)
+- 📝️ [Sobre](#%EF%B8%8F-sobre)
+- 👨‍💻️ [Tecnogias utilizadas](#%EF%B8%8F-tecnogias-utilizadas)
+- 📋️ [IDE e Facilidades](#%EF%B8%8F-ide-e-facilidades)
+- 📦️ [Como baixar o projeto](#%EF%B8%8F-como-baixar-o-projeto)
+- 🤔️ [Como contribuir](#%EF%B8%8F-como-contribuir)
 
 ---
 
