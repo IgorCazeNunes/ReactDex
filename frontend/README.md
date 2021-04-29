@@ -2,7 +2,15 @@
   ReactDex Web
 </h1>
 
-<h1>Índice</h1>
+<h1 align="center">Índice</h1>
+
+<p align="center">
+   <a href="#-web-desktop-preview">🖥 Desktop Preview</a> •
+   <a href="#-web-mobile-preview">📱 Mobile Preview</a> • 
+   <a href="#%EF%B8%8F-tecnogias-utilizadas">👨‍💻️ Tecnogias utilizadas</a> • 
+   <a href="#%EF%B8%8F-como-baixar-o-projeto">📦️ Como baixar o projeto</a> • 
+   <a href="#%EF%B8%8F-como-contribuir">🤔️ Como contribuir</a> • 
+</p>
 
 - 🖥 [Desktop Preview](#-web-desktop-preview)
 - 📱 [Mobile Preview](#-web-mobile-preview)
@@ -12,17 +20,28 @@
 
 ---
 
-## 🖥 Web Desktop Preview
-<img src='../github/Web Desktop Preview.gif' width="100%"/>
+<h2 align="center">
+  🖥 Web Desktop Preview 
+</h2>
+
+<img src='../github/Web Desktop Preview.gif' width="100%" align="center" />
 
 ---
 
-## 📱 Web Mobile Preview
-<img src='../github/Web Mobile Preview.gif' width="50%"/>
+<h2 align="center"> 
+  📱 Web Mobile Preview
+</h2>
+
+<p align="center">
+  <img src='../github/Web Mobile Preview.gif' width="50%" />
+</p>
 
 ---
 
-## 👨‍💻️ Tecnogias utilizadas
+
+<h2 align="center">
+  👨‍💻️ Tecnogias utilizadas
+</h2>
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
