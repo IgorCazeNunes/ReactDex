@@ -7,6 +7,7 @@
 - 🖥 [Web Desktop Preview](#-web-desktop-preview)
 - 📱 [Web Mobile Preview](#-web-mobile-preview)
 - 👨‍💻️ [Tecnogias utilizadas](#%EF%B8%8F-tecnogias-utilizadas)
+- 📋️ [IDE e Facilidades](#%EF%B8%8F-ide-e-facilidades)
 
 ---
 
@@ -35,6 +36,15 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [Axios](https://www.npmjs.com/package/axios)
 - [Polished](https://www.npmjs.com/package/polished)
 - [Styled-components](https://www.npmjs.com/package/styled-components)
+
+---
+
+## 📋️ IDE e Facilidades
+
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [Editor Config](https://editorconfig.org/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
 
 ---
 
