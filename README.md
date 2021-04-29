@@ -11,7 +11,6 @@
 <h1>Índice</h1>
 
 - 📝️ [Sobre](#%EF%B8%8F-sobre)
-- 📋️ [IDE e Facilidades](#%EF%B8%8F-ide-e-facilidades)
 - 📦️ [Como baixar o projeto](#%EF%B8%8F-como-baixar-o-projeto)
 - 🤔️ [Como contribuir](#%EF%B8%8F-como-contribuir)
 
@@ -25,15 +24,6 @@ Com essa aplicação é possível listar todos os pokémons existenes, além de 
 
 - 🖥 [ReactDex Web](https://github.com/IgorCazeNunes/ReactDex/tree/main/frontend)
 - 📱 [ReactDex Mobile](https://github.com/IgorCazeNunes/ReactDex/tree/main/mobile)
-
----
-
-## 📋️ IDE e Facilidades
-
-- [Visual Studio Code](https://code.visualstudio.com/)
-- [Editor Config](https://editorconfig.org/)
-- [ESLint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
 
 ---
 
