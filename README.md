@@ -32,16 +32,6 @@ Com essa aplicação é possível listar todos os pokémons existenes, além de 
 ```bash
   # Clonar o repositório
   ❯ git clone https://github.com/IgorCazeNunes/ReactDex.git
-
-  # Entrar no diretório
-  ❯ cd reactdex/frontend
-
-  # Instalando as dependências
-  ❯ yarn
-  # ou pode usar o `npm`
-  ❯ npm install
-```
-
 ---
 
 ## 🤔️ Como contribuir
