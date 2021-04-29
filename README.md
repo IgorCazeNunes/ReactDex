@@ -11,7 +11,6 @@
 <h1>Índice</h1>
 
 - 📝️ [Sobre](#%EF%B8%8F-sobre)
-- 📦️ [Como baixar o projeto](#%EF%B8%8F-como-baixar-o-projeto)
 - 🤔️ [Como contribuir](#%EF%B8%8F-como-contribuir)
 
 ---
@@ -24,15 +23,6 @@ Com essa aplicação é possível listar todos os pokémons existenes, além de 
 
 - 🖥 [ReactDex Web](https://github.com/IgorCazeNunes/ReactDex/tree/main/frontend)
 - 📱 [ReactDex Mobile](https://github.com/IgorCazeNunes/ReactDex/tree/main/mobile)
-
----
-
-## 📦️ Como baixar o projeto
-
-```bash
-  # Clonar o repositório
-  ❯ git clone https://github.com/IgorCazeNunes/ReactDex.git
-```
 
 ---
 
