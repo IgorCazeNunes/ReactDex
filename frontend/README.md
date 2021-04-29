@@ -6,11 +6,7 @@
 
 - 🖥 [Web Desktop Preview](#-web-desktop-preview)
 - 📱 [Web Mobile Preview](#-web-mobile-preview)
-- 📝️ [Sobre](#%EF%B8%8F-sobre)
 - 👨‍💻️ [Tecnogias utilizadas](#%EF%B8%8F-tecnogias-utilizadas)
-- 📋️ [IDE e Facilidades](#%EF%B8%8F-ide-e-facilidades)
-- 📦️ [Como baixar o projeto](#%EF%B8%8F-como-baixar-o-projeto)
-- 🤔️ [Como contribuir](#%EF%B8%8F-como-contribuir)
 
 ---
 
@@ -39,33 +35,6 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [Axios](https://www.npmjs.com/package/axios)
 - [Polished](https://www.npmjs.com/package/polished)
 - [Styled-components](https://www.npmjs.com/package/styled-components)
-
----
-
-## 📦️ Como baixar o projeto
-
-```bash
-  # Clonar o repositório
-  ❯ git clone https://github.com/IgorCazeNunes/ReactDex.git
-
-  # Entrar no diretório
-  ❯ cd reactdex/frontend
-
-  # Instalando as dependências
-  ❯ yarn
-  # ou pode usar o `npm`
-  ❯ npm install
-```
-
-## 🤔️ Como contribuir
-
-1. Faça o `fork` deste repositório
-2. Crie uma branch com sua feature:
-   - `$ git checkout -b minha_feature`
-3. Confirme sua branch:
-   - `$ git commit -m "feature: Meu novo recurso"`
-4. Envie sua branch:
-   - `$ git push origin minha_feature`
 
 ---
 
