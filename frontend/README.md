@@ -1,46 +1,72 @@
-# Getting Started with Create React App
+<h1 align="center">
+  ReactDex Web
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1>Índice</h1>
 
-## Available Scripts
+- 🖥 [Desktop Preview](#-web-desktop-preview)
+- 📱 [Mobile Preview](#-web-mobile-preview)
+- 👨‍💻️ [Tecnogias utilizadas](#%EF%B8%8F-tecnogias-utilizadas)
+- 📦️ [Como baixar o projeto](#%EF%B8%8F-como-baixar-o-projeto)
+- 🤔️ [Como contribuir](#%EF%B8%8F-como-contribuir)
 
-In the project directory, you can run:
+---
 
-### `yarn start`
+## 🖥 Web Desktop Preview
+<img src='github/Web Desktop Preview.gif' width="100%"/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 📱 Web Mobile Preview
+<img src='github/Web Mobile Preview.gif' width="50%"/>
 
-### `yarn test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 👨‍💻️ Tecnogias utilizadas
 
-### `yarn build`
+O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [TypeScript](https://www.npmjs.com/package/typescript)
+- [React](https://www.npmjs.com/package/react)
+- [React-dom](https://www.npmjs.com/package/react-dom)
+- [React-icons](https://www.npmjs.com/package/react-icons)
+- [React-infinite-scroller](https://www.npmjs.com/package/react-infinite-scroller)
+- [React-router-dom](https://www.npmjs.com/package/react-router-dom)
+- [Axios](https://www.npmjs.com/package/axios)
+- [Polished](https://www.npmjs.com/package/polished)
+- [Styled-components](https://www.npmjs.com/package/styled-components)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📦️ Como baixar o projeto
 
-### `yarn eject`
+```bash
+  # Clonar o repositório
+  ❯ git clone https://github.com/IgorCazeNunes/ReactDex.git
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+  # Entrar no diretório
+  ❯ cd reactdex/frontend
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  # Instalando as dependências
+  ❯ yarn
+  # ou pode usar o `npm`
+  ❯ npm install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🤔️ Como contribuir
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Faça o `fork` deste repositório
+2. Crie uma branch com sua feature:
+   - `$ git checkout -b minha_feature`
+3. Confirme sua branch:
+   - `$ git commit -m "feature: Meu novo recurso"`
+4. Envie sua branch:
+   - `$ git push origin minha_feature`
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h4 align="center">
+  Feito com 💜 por Igor 👋️ <a href="https://www.linkedin.com/in/IgorCazeNunes/" target="_blank">Entre em contato!</a>
+</h4>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
