@@ -19,7 +19,7 @@
 
 O projeto **ReactDex** foi um projeto com objetivo de demonstrar os aprendizados tidos no bootcamp GoStack da [RocketSeat](https://rocketseat.com.br/) desenvolvendo sozinho uma Aplicação Web e Mobile consumindo a [API do Pokémon](https://pokeapi.co/). Para o desenvolvimento foi utilizado principalmente as bibliotecas React.JS para desenvolver o front-end web e React.Native para desenvolver o aplicativo mobile.
 
-Com essa aplicação é possível listar todos os pokémons existenes, além de poder pesquisar um em especifico. Também é possivel visualizar detalhes avançados do pokémon na página de detalhes do mesmo.
+Com essa aplicação é possível listar todos os pokémons existentes, além de poder pesquisar por um em especifico. Também é possivel visualizar detalhes avançados do pokémon na página de detalhes do mesmo.
 
 - [ReactDex Web](https://github.com/IgorCazeNunes/ReactDex/tree/main/frontend)
 - [ReactDex Mobile](https://github.com/IgorCazeNunes/ReactDex/tree/main/mobile)
