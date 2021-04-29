@@ -10,23 +10,10 @@
 
 <h1>Índice</h1>
 
-- 🖥 [Web Desktop Preview](#-web-desktop-preview)
-- 📱 [Web Mobile Preview](#-web-mobile-preview)
 - 📝️ [Sobre](#%EF%B8%8F-sobre)
-- 👨‍💻️ [Tecnogias utilizadas](#%EF%B8%8F-tecnogias-utilizadas)
 - 📋️ [IDE e Facilidades](#%EF%B8%8F-ide-e-facilidades)
 - 📦️ [Como baixar o projeto](#%EF%B8%8F-como-baixar-o-projeto)
 - 🤔️ [Como contribuir](#%EF%B8%8F-como-contribuir)
-
----
-
-## 🖥 Web Desktop Preview
-<img src='github/Web Desktop Preview.gif' width="100%"/>
-
----
-
-## 📱 Web Mobile Preview
-<img src='github/Web Mobile Preview.gif' width="50%"/>
 
 ---
 
@@ -36,21 +23,8 @@ O projeto **ReactDex** foi um projeto com objetivo de demonstrar os aprendizados
 
 Com essa aplicação é possível listar todos os pokémons existenes, além de poder pesquisar um em especifico. Também é possivel visualizar detalhes avançados do pokémon na página de detalhes do mesmo.
 
----
-
-## 👨‍💻️ Tecnogias utilizadas
-
-O projeto foi desenvolvido utilizando as seguintes tecnologias:
-
-- [TypeScript](https://www.npmjs.com/package/typescript)
-- [React](https://www.npmjs.com/package/react)
-- [React-dom](https://www.npmjs.com/package/react-dom)
-- [React-icons](https://www.npmjs.com/package/react-icons)
-- [React-infinite-scroller](https://www.npmjs.com/package/react-infinite-scroller)
-- [React-router-dom](https://www.npmjs.com/package/react-router-dom)
-- [Axios](https://www.npmjs.com/package/axios)
-- [Polished](https://www.npmjs.com/package/polished)
-- [Styled-components](https://www.npmjs.com/package/styled-components)
+- 🖥 [ReactDex Web](https://github.com/IgorCazeNunes/ReactDex/tree/main/frontend)
+- 📱 [ReactDex Mobile](https://github.com/IgorCazeNunes/ReactDex/tree/main/mobile)
 
 ---
 
@@ -77,6 +51,8 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
   # ou pode usar o `npm`
   ❯ npm install
 ```
+
+---
 
 ## 🤔️ Como contribuir
 
