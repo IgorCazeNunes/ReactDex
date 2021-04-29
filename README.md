@@ -32,6 +32,8 @@ Com essa aplicação é possível listar todos os pokémons existenes, além de 
 ```bash
   # Clonar o repositório
   ❯ git clone https://github.com/IgorCazeNunes/ReactDex.git
+```
+
 ---
 
 ## 🤔️ Como contribuir
