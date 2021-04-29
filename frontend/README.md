@@ -12,36 +12,21 @@
    <a href="#%EF%B8%8F-como-contribuir">🤔️ Como contribuir</a> • 
 </p>
 
-- 🖥 [Desktop Preview](#-web-desktop-preview)
-- 📱 [Mobile Preview](#-web-mobile-preview)
-- 👨‍💻️ [Tecnogias utilizadas](#%EF%B8%8F-tecnogias-utilizadas)
-- 📦️ [Como baixar o projeto](#%EF%B8%8F-como-baixar-o-projeto)
-- 🤔️ [Como contribuir](#%EF%B8%8F-como-contribuir)
-
 ---
 
-<h2 align="center">
-  🖥 Web Desktop Preview 
-</h2>
+##  🖥 Web Desktop Preview 
 
 <img src='../github/Web Desktop Preview.gif' width="100%" align="center" />
 
 ---
 
-<h2 align="center"> 
-  📱 Web Mobile Preview
-</h2>
+## 📱 Web Mobile Preview
 
-<p align="center">
-  <img src='../github/Web Mobile Preview.gif' width="50%" />
-</p>
+<img src='../github/Web Mobile Preview.gif' width="50%" />
 
 ---
 
-
-<h2 align="center">
-  👨‍💻️ Tecnogias utilizadas
-</h2>
+## 👨‍💻️ Tecnogias utilizadas
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
