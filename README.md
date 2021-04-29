@@ -21,8 +21,8 @@ O projeto **ReactDex** foi um projeto com objetivo de demonstrar os aprendizados
 
 Com essa aplicação é possível listar todos os pokémons existenes, além de poder pesquisar um em especifico. Também é possivel visualizar detalhes avançados do pokémon na página de detalhes do mesmo.
 
-- 🖥 [ReactDex Web](https://github.com/IgorCazeNunes/ReactDex/tree/main/frontend)
-- 📱 [ReactDex Mobile](https://github.com/IgorCazeNunes/ReactDex/tree/main/mobile)
+- [ReactDex Web](https://github.com/IgorCazeNunes/ReactDex/tree/main/frontend)
+- [ReactDex Mobile](https://github.com/IgorCazeNunes/ReactDex/tree/main/mobile)
 
 ---
 
