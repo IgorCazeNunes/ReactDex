@@ -8,6 +8,8 @@
   <img src="https://img.shields.io/github/forks/IgorCazeNunes/ReactDex?color=red&style=for-the-badge" />
 </p>
 
+<img src='./github/Banner.png' width="100%" />
+
 <h1>Índice</h1>
 
 - 📝️ [Sobre](#%EF%B8%8F-sobre)
