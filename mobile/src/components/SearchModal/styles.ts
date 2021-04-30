@@ -126,9 +126,12 @@ export const SubmitButton = styled.TouchableOpacity`
 
     margin-top: 10px;
 
-    color: ${props => props.theme.font.white};
-
     background-color: ${props => props.theme.background.vermillion};
+
+    ${props =>
+        props.disabled &&
+        `background-color: ${props.theme.background.disabled};`}
+
     border-radius: 5px;
     elevation: 3;
 `;

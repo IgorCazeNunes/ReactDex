@@ -24,6 +24,9 @@ declare module 'styled-components' {
 
             /** background: #1266f1 */
             blue: string;
+
+            /** background: #707070 */
+            disabled: string;
         };
 
         /** Fonts Colors */

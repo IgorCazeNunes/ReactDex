@@ -1,7 +1,8 @@
 import React, { useCallback, useEffect, useState } from 'react';
-// import { ErrorMessage, Field, Formik } from 'formik';
+import { ErrorMessage, Field, Formik } from 'formik';
 import { useNavigation } from '@react-navigation/native';
 
+import { ActivityIndicator } from 'react-native';
 import api from '../../services/api';
 
 import * as S from './styles';
@@ -46,27 +47,30 @@ const SearchModal: React.FC = () => {
         setIsSearchModalOpen(false);
     }, []);
 
-    // const validateSearch = useCallback(values => {
-    //     let errors = {};
+    const validateSearch = useCallback(values => {
+        let errors = {};
 
-    //     if (!values.searchInput) {
-    //         errors = { searchInput: 'Required' };
-    //     }
+        if (!values.inputName) {
+            errors = { inputName: 'Required' };
+        }
 
-    //     return errors;
-    // }, []);
+        return errors;
+    }, []);
 
-    // const handleSearch = useCallback(async (values, { setSubmitting }) => {
-    //     try {
-    //         setIsSearchErrored(false);
+    const handleSearch = useCallback(async (values, { setSubmitting }) => {
+        try {
+            setIsSearchErrored(false);
 
-    //         const { data } = await api.get<PokemonRequest>(
-    //             `pokemon/${values.searchInput.toLowerCase()}`,
-    //         );
-    //     } catch (error) {
-    //         setIsSearchErrored(true);
-    //     }
-    // }, []);
+            const { data } = await api.get<PokemonRequest>(
+                `pokemon/${values.inputName.toLowerCase()}`,
+            );
+
+            console.log('deu bom');
+        } catch (error) {
+            setIsSearchErrored(true);
+            console.log('deu ruim');
+        }
+    }, []);
 
     return (
         <>
@@ -85,42 +89,63 @@ const SearchModal: React.FC = () => {
                             </S.CloseButton>
                         </S.ModalHeader>
 
-                        {/* <Formik
-                            initialValues={{ searchInput: '' }}
+                        <Formik
+                            initialValues={{ inputName: '' }}
                             validate={validateSearch}
                             onSubmit={handleSearch}
                         >
-                            {({ handleSubmit, isSubmitting }) => ( */}
-                        <S.InputContainer>
-                            <S.InputLabel>Pokémon Name:</S.InputLabel>
+                            {({
+                                handleChange,
+                                handleBlur,
+                                handleSubmit,
+                                values,
+                                isSubmitting,
+                            }) => (
+                                <>
+                                    <S.InputContainer>
+                                        <S.InputLabel>
+                                            Pokémon Name:
+                                        </S.InputLabel>
 
-                            <S.InputTextInput
-                                keyboardAppearance="dark"
-                                placeholderTextColor="#666360"
-                                placeholder="Insert pokémon name..."
-                            />
-                        </S.InputContainer>
+                                        <S.InputTextInput
+                                            keyboardAppearance="dark"
+                                            placeholderTextColor="#666360"
+                                            placeholder="Insert pokémon name..."
+                                            onChangeText={handleChange(
+                                                'inputName',
+                                            )}
+                                            onBlur={handleBlur('inputName')}
+                                            value={values.inputName}
+                                        />
+                                    </S.InputContainer>
 
-                        {isSearchErrored && (
-                            <S.ErrorText>Invalid pokemon name!</S.ErrorText>
-                        )}
+                                    {isSearchErrored && (
+                                        <S.ErrorText>
+                                            Invalid pokémon name!
+                                        </S.ErrorText>
+                                    )}
 
-                        <S.SubmitButton
-                            onPress={() => {
-                                console.log('Submit');
-                            }}
-                            // disabled={isSubmitting}
-                        >
-                            <S.SubmitButtonIcon name="search" />
-                            <S.SubmitButtonText>Search</S.SubmitButtonText>
-                        </S.SubmitButton>
-                        {/* {isSubmitting ? (
-                                            <FiLoader size={18} />
+                                    <S.SubmitButton
+                                        onPress={() => {
+                                            handleSubmit();
+                                        }}
+                                        disabled={isSubmitting}
+                                    >
+                                        {isSubmitting ? (
+                                            <S.SubmitButtonIcon name="loader" />
                                         ) : (
-                                            <FiSearch size={18} />
-                                        )} */}
-                        {/* )}
-                        </Formik>  */}
+                                            <S.SubmitButtonIcon name="search" />
+                                        )}
+
+                                        <S.SubmitButtonText>
+                                            {isSubmitting
+                                                ? `Searching...`
+                                                : `Search`}
+                                        </S.SubmitButtonText>
+                                    </S.SubmitButton>
+                                </>
+                            )}
+                        </Formik>
                     </S.Container>
                 </S.Overlay>
             ) : (

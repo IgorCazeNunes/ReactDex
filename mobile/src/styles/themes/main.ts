@@ -8,6 +8,7 @@ export default {
         platinum: '#e2e2e2',
         dark: '#312e38',
         blue: '#1266f1',
+        disabled: '#707070',
     },
 
     font: {
