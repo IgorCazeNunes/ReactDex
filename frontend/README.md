@@ -35,6 +35,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [React-infinite-scroller](https://www.npmjs.com/package/react-infinite-scroller)
 - [React-router-dom](https://www.npmjs.com/package/react-router-dom)
 - [Axios](https://www.npmjs.com/package/axios)
+- [Formik](https://www.npmjs.com/package/formik)
 - [Polished](https://www.npmjs.com/package/polished)
 - [Styled-components](https://www.npmjs.com/package/styled-components)
 
@@ -46,7 +47,6 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - [Editor Config](https://editorconfig.org/)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
-
 
 ---
 
