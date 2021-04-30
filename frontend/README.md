@@ -59,7 +59,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
   ❯ git clone https://github.com/IgorCazeNunes/ReactDex.git
 
   # Entre no diretório
-  ❯ cd gomarketplace
+  ❯ cd reactdex/frontend
 
   # Instale as dependências
   ❯ yarn
