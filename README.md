@@ -10,11 +10,6 @@
 
 <img src='./github/Banner.png' width="100%" />
 
-<h1>Índice</h1>
-
-- 📝️ [Sobre](#%EF%B8%8F-sobre)
-- 🤔️ [Como contribuir](#%EF%B8%8F-como-contribuir)
-
 ## 📝️ Sobre
 
 O projeto **ReactDex** foi um projeto com objetivo de demonstrar os aprendizados tidos no bootcamp GoStack da [RocketSeat](https://rocketseat.com.br/) desenvolvendo sozinho uma Aplicação Web e Mobile consumindo a [API do Pokémon](https://pokeapi.co/). Para o desenvolvimento foi utilizado principalmente as bibliotecas React.JS para desenvolver o front-end web e React.Native para desenvolver o aplicativo mobile.
