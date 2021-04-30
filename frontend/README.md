@@ -2,6 +2,8 @@
   ReactDex Web
 </h1>
 
+<img src='../github/Banner - Desktop.png' width="100%" align="center" />
+
 <h1>Índice</h1>
 
 - 🖥 [Web Desktop Preview](#-web-desktop-preview)
