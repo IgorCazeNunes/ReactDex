@@ -7,12 +7,14 @@ export default {
         vermillion: '#e3350d',
         platinum: '#e2e2e2',
         dark: '#312e38',
+        blue: '#1266f1',
     },
 
     font: {
         white: '#ffffff',
         black: '#000000',
         dark: '#333333',
+        vermillion: '#e3350d',
     },
 
     statusBackground: {

@@ -21,6 +21,9 @@ declare module 'styled-components' {
 
             /** background: #312e38 */
             dark: string;
+
+            /** background: #1266f1 */
+            blue: string;
         };
 
         /** Fonts Colors */
@@ -33,6 +36,9 @@ declare module 'styled-components' {
 
             /** color: #333333 */
             dark: string;
+
+            /** background: #e3350d */
+            vermillion: string;
         };
 
         /** Status Bar Variation Background Colors */
