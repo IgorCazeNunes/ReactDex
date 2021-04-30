@@ -20,24 +20,8 @@ interface PokemonDataList {
 const SearchModal: React.FC = () => {
     const navigation = useNavigation();
 
-    // const [pokemonDataList, setPokemonDataList] = useState<PokemonDataList[]>(
-    //     [],
-    // );
     const [isSearchErrored, setIsSearchErrored] = useState(false);
     const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
-
-    // const getPokemonDataList = useCallback(async () => {
-    //     const { data } = await api.get('pokemon?limit=898&offset=0');
-
-    //     const dataResults: PokemonDataList[] = data.results;
-
-    //     setPokemonDataList(dataResults);
-    // }, []);
-
-    // useEffect(() => {
-    //     getPokemonDataList();
-    //     // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, []);
 
     const openSearchModal = useCallback(() => {
         setIsSearchModalOpen(true);
