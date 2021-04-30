@@ -6,6 +6,7 @@ import api from '../../services/api';
 import PokemonCard from '../../components/PokemonCard';
 
 import * as S from './styles';
+import SearchModal from '../../components/SearchModal';
 
 interface IPokemonListData {
     name: string;
@@ -106,6 +107,8 @@ const Dashboard: React.FC = () => {
                     return <PokemonCard pokemon={item} />;
                 }}
             />
+
+            <SearchModal />
         </S.Container>
     );
 };

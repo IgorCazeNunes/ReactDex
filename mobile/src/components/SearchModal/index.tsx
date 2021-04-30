@@ -61,14 +61,15 @@ const SearchModal: React.FC = () => {
         try {
             setIsSearchErrored(false);
 
-            const { data } = await api.get<PokemonRequest>(
+            const {
+                data: { id },
+            } = await api.get<PokemonRequest>(
                 `pokemon/${values.inputName.toLowerCase()}`,
             );
 
-            console.log('deu bom');
+            navigation.navigate('PokemonDetails', { id });
         } catch (error) {
             setIsSearchErrored(true);
-            console.log('deu ruim');
         }
     }, []);
 
