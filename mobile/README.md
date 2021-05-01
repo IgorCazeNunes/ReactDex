@@ -15,7 +15,11 @@
 
 ## 📱 Mobile Gif Preview
 
-Working in progress...
+<p align="center">
+    <img src='../github/Mobile Preview 1.gif' width="46%" />
+    <img width="6%" />
+    <img src='../github/Mobile Preview 2.gif' width="46%" />
+</p>
 
 ---
 
@@ -23,7 +27,14 @@ Working in progress...
 
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-Working in progress...
+- [TypeScript](https://www.npmjs.com/package/typescript)
+- [React-native](https://www.npmjs.com/package/react-native)
+- [React-navigation](https://www.npmjs.com/package/react-navigation)
+- [React-native-vector-icons](https://www.npmjs.com/package/react-native-vector-icons)
+- [React-native-linear-gradient](https://www.npmjs.com/package/react-native-linear-gradient)
+- [Axios](https://www.npmjs.com/package/axios)
+- [Formik](https://www.npmjs.com/package/formik)
+- [Polished](https://www.npmjs.com/package/polished)
 
 ---
 
