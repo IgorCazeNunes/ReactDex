@@ -15,10 +15,10 @@
 
 ## 📱 Mobile Gif Preview
 
-<p align="center">
-    <img src='../github/Mobile Preview 1.gif' width="46%" />
-    <img width="6%" />
-    <img src='../github/Mobile Preview 2.gif' width="46%" />
+<p>
+    <img src='../github/Mobile Preview 1.gif' height="480px" />
+    <img width="50px" />
+    <img src='../github/Mobile Preview 2.gif' height="480px" />
 </p>
 
 ---
